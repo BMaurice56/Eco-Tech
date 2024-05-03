@@ -1,3 +1,7 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="width_title">450dp</dimen>
+    <dimen name="height_title">50dp</dimen>
+    <dimen name="textSize_title">25dp</dimen>
+    <dimen name="paddingStart_title">155dp</dimen>
+    <dimen name="paddingTop_title">7dp</dimen>
 </resources>
