@@ -41,7 +41,7 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/environment"
 
         android:layout_width="350dp"
         android:layout_height="125dp"
@@ -56,9 +56,23 @@
 
         tools:ignore="MissingConstraints" />
 
+    <TextView
+        android:id="@+id/textViewImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/environment"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+
+        android:layout_marginTop="62dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <ImageButton
         android:id="@+id/imageButton2"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/handshake"
 
         android:layout_width="350dp"
         android:layout_height="125dp"
@@ -69,6 +83,20 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewImageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/companyAndUs"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+
+        android:layout_marginTop="62dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"

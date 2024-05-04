@@ -18,5 +18,8 @@
     <!--<string name="settings">Paramètres</string>-->
     <string name="home">Accueil</string>
 
+    <string name="environment">Nos engagements</string>
+    <string name="companyAndUs">Votre entreprise et nous</string>
+
 
 </resources>
