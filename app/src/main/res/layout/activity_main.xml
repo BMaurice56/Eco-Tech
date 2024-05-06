@@ -138,8 +138,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
 
-            app:layout_constraintStart_toEndof="footerLayout"
-
             android:clickable="true" />
 
         <!-- Bouton "Panier" -->
@@ -149,8 +147,6 @@
 
             android:layout_width="105dp"
             android:layout_height="50dp"
-
-            app:layout_constraintStart_toEndof="buttonHome"
 
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
@@ -168,8 +164,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
 
-            app:layout_constraintStart_toEndof="buttonShoppingBasket"
-
             android:clickable="true" />
 
         <!-- Bouton "Parametre" -->
@@ -182,8 +176,6 @@
 
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-
-            app:layout_constraintStart_toEndof="buttonPersonalInformation"
 
             android:clickable="true" />
 
