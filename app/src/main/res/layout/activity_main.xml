@@ -114,7 +114,7 @@
 
 
     <LinearLayout
-        android:id="@+id/layout"
+        android:id="@+id/layoutFooter"
 
         android:orientation="horizontal"
 
@@ -127,18 +127,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Bouton "Home" -->
+        <!-- Bouton "Accueil" -->
         <ImageButton
             android:id="@+id/buttonHome"
             android:src="@drawable/bouton_home"
 
-            android:layout_width="105dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/width_imageButton_footer"
+            android:layout_height="@dimen/height_imageButton_footer"
 
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-
-            app:layout_constraintStart_toEndof="footerLayout"
+            android:layout_marginTop="@dimen/marginTop_imageButton_footer"
+            android:layout_marginBottom="@dimen/marginBottom_imageButton_footer"
 
             android:clickable="true" />
 
@@ -147,43 +145,37 @@
             android:id="@+id/buttonShoppingBasket"
             android:src="@drawable/bouton_shopping_basket"
 
-            android:layout_width="105dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/width_imageButton_footer"
+            android:layout_height="@dimen/height_imageButton_footer"
 
-            app:layout_constraintStart_toEndof="buttonHome"
-
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginTop="@dimen/marginTop_imageButton_footer"
+            android:layout_marginBottom="@dimen/marginBottom_imageButton_footer"
 
             android:clickable="true" />
 
-        <!-- Bouton "Info personnel" -->
+        <!-- Bouton "Informations personnelles" -->
         <ImageButton
             android:id="@+id/buttonPersonalInformation"
             android:src="@drawable/bouton_personal_information"
 
-            android:layout_width="105dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/width_imageButton_footer"
+            android:layout_height="@dimen/height_imageButton_footer"
 
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-
-            app:layout_constraintStart_toEndof="buttonShoppingBasket"
+            android:layout_marginTop="@dimen/marginTop_imageButton_footer"
+            android:layout_marginBottom="@dimen/marginBottom_imageButton_footer"
 
             android:clickable="true" />
 
-        <!-- Bouton "Parametre" -->
+        <!-- Bouton "Paramètres" -->
         <ImageButton
             android:id="@+id/buttonParameter"
             android:src="@drawable/bouton_parameter"
 
-            android:layout_width="105dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/width_imageButton_footer"
+            android:layout_height="@dimen/height_imageButton_footer"
 
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-
-            app:layout_constraintStart_toEndof="buttonPersonalInformation"
+            android:layout_marginTop="@dimen/marginTop_imageButton_footer"
+            android:layout_marginBottom="@dimen/marginBottom_imageButton_footer"
 
             android:clickable="true" />
 

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FirstFragment" >
 
+    <!-- En-tete de l'application -->
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
@@ -14,71 +15,123 @@
 
         android:width="450dp"
         android:height="50dp"
-        android:background="@color/greenLime"
 
         android:paddingStart="155dp"
         android:paddingTop="7dp"
+
         android:text="@string/title"
-        android:textColor="@color/white"
         android:textSize="25sp"
+        android:textColor="@color/white"
+        android:background="@color/greenLime"
 
         tools:ignore="MissingConstraints" />
 
-    <SearchView
-        android:id="@+id/searchView"
+    <!-- Texte "Votre Panier:" -->
+    <TextView
+        android:id="@+id/shoppingBasket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Votre Panier:"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        tools:ignore="MissingConstraints"/>
 
-        android:maxWidth="450dp"
-        android:maxHeight="50dp"
-
-        android:paddingStart="360dp"
-        android:paddingTop="10dp"
-
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:src="@drawable/ic_launcher_foreground"
-
-        android:layout_width="350dp"
-        android:layout_height="125dp"
-
-        app:layout_constraintStart_toStartOf="@+id/searchView"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.5"
-        tools:layout_editor_absoluteY="130dp"
-
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:src="@drawable/ic_launcher_foreground"
-
-        android:layout_width="350dp"
-        android:layout_height="125dp"
-
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+    <!-- Espace réservé pour afficher les articles -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selectedElementsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/shoppingBasket"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_empty"/>
 
-        tools:ignore="MissingConstraints" />
+    <!-- Bouton "Vider Panier" -->
+    <Button
+        android:id="@+id/button_empty"
+        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:text="Vider Panier"
+        android:layout_marginLeft="4dp"
+        android:layout_marginVertical="30dp"
+        android:backgroundTint="@color/grey"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/bottonLayout"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
+    <!-- Bouton "Payer" -->
+    <Button
+        android:id="@+id/button_buy"
+        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:text="Payer"
+        android:layout_marginRight="4dp"
+        android:layout_marginVertical="30dp"
+        android:backgroundTint="@color/grey"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/bottonLayout"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-
+    <!-- Pied de page de l'application  -->
+    <LinearLayout
+        android:id="@+id/bottonLayout"
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/greyLight"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        app:layout_constraintHorizontal_bias="0.5"
-        tools:layout_editor_absoluteY="450dp"
+        <!-- Bouton "Home" -->
+        <ImageButton
+            android:id="@+id/buttonHome"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:src="@drawable/bouton_home"/>
 
-        tools:ignore="MissingConstraints" />
+        <!-- Bouton "Panier" -->
+        <ImageButton
+            android:id="@+id/buttonShoppingBasket"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:src="@drawable/bouton_shopping_basket"/>
+
+        <!-- Bouton "Info personnel" -->
+        <ImageButton
+            android:id="@+id/buttonPersonalInformation"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:src="@drawable/bouton_personal_information"/>
+
+        <!-- Bouton "Parametre" -->
+        <ImageButton
+            android:id="@+id/buttonParameter"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:src="@drawable/bouton_parameter"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
