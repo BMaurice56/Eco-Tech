@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="buttonHome" type="id">@+id/buttonHome</item>
+    <item name="buttonShopping" type="id">@+id/buttonShopping</item>
+    <item name="buttonLoginRegister" type="id">@+id/buttonLoginRegister</item>
+    <item name="buttonParameter" type="id">@+id/buttonParameter</item>
+</resources>
