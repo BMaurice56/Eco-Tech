@@ -7,178 +7,82 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-        android:width="450dp"
-        android:height="50dp"
+            android:background="@color/greenLime"
+            android:paddingStart="150dp"
 
-        android:paddingStart="155dp"
-        android:paddingTop="7dp"
+            android:text="@string/title"
+            android:textColor="@color/white"
+            android:textSize="30sp"
 
-        android:text="@string/title"
-        android:textSize="25sp"
-        android:textColor="@color/white"
-        android:background="@color/greenLime"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:id="@+id/layoutFooter"
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
 
-        android:maxWidth="450dp"
-        android:maxHeight="50dp"
+            android:background="@color/greyLight"
+
+            android:orientation="horizontal"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageButton
+                android:id="@id/buttonHome"
+                android:src="@drawable/bouton_home"
+
+                android:layout_width="102dp"
+                android:layout_height="@dimen/height_imageButton_footer"
+
+                android:clickable="true" />
+
+            <ImageButton
+                android:id="@id/buttonShopping"
+                android:src="@drawable/bouton_shopping_basket"
+
+                android:layout_width="@dimen/width_imageButton_footer"
+                android:layout_height="@dimen/height_imageButton_footer"
+
+                android:clickable="true" />
+
+            <ImageButton
+                android:id="@id/buttonLoginRegister"
+                android:src="@drawable/bouton_personal_information"
+
+                android:layout_width="@dimen/width_imageButton_footer"
+                android:layout_height="@dimen/height_imageButton_footer"
+
+                android:clickable="true" />
+
+            <ImageButton
+                android:id="@id/buttonParameter"
+                android:src="@drawable/bouton_parameter"
+
+                android:layout_width="@dimen/width_imageButton_footer"
+                android:layout_height="@dimen/height_imageButton_footer"
+
+                android:clickable="true" />
+        </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="410dp"
+        android:layout_height="640dp"
 
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
-        android:paddingStart="370dp"
-        android:paddingTop="10dp"
-
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:src="@drawable/environment"
-
-        android:layout_width="350dp"
-        android:layout_height="125dp"
-
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintBottom_toTopOf="@+id/layoutFooter"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.5"
-        tools:layout_editor_absoluteY="130dp"
-
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textViewImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="@string/environment"
-        android:textColor="@color/white"
-        android:textSize="32sp"
-
-        android:layout_marginTop="62dp"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:src="@drawable/handshake"
-
-        android:layout_width="350dp"
-        android:layout_height="125dp"
-
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textViewImageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="@string/companyAndUs"
-        android:textColor="@color/white"
-        android:textSize="32sp"
-
-        android:layout_marginTop="62dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.5"
-        tools:layout_editor_absoluteY="450dp"
-
-        tools:ignore="MissingConstraints" />
-
-
-    <LinearLayout
-        android:id="@+id/layoutFooter"
-
-        android:orientation="horizontal"
-
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
-        android:background="@color/greyLight"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <!-- Bouton "Accueil" -->
-        <ImageButton
-            android:id="@+id/buttonHome"
-            android:src="@drawable/bouton_home"
-
-            android:layout_width="@dimen/width_imageButton_footer"
-            android:layout_height="@dimen/height_imageButton_footer"
-
-            android:layout_marginTop="@dimen/marginTop_imageButton_footer"
-            android:layout_marginBottom="@dimen/marginBottom_imageButton_footer"
-
-            android:clickable="true" />
-
-        <!-- Bouton "Panier" -->
-        <ImageButton
-            android:id="@+id/buttonShoppingBasket"
-            android:src="@drawable/bouton_shopping_basket"
-
-            android:layout_width="@dimen/width_imageButton_footer"
-            android:layout_height="@dimen/height_imageButton_footer"
-
-            android:layout_marginTop="@dimen/marginTop_imageButton_footer"
-            android:layout_marginBottom="@dimen/marginBottom_imageButton_footer"
-
-            android:clickable="true" />
-
-        <!-- Bouton "Informations personnelles" -->
-        <ImageButton
-            android:id="@+id/buttonPersonalInformation"
-            android:src="@drawable/bouton_personal_information"
-
-            android:layout_width="@dimen/width_imageButton_footer"
-            android:layout_height="@dimen/height_imageButton_footer"
-
-            android:layout_marginTop="@dimen/marginTop_imageButton_footer"
-            android:layout_marginBottom="@dimen/marginBottom_imageButton_footer"
-
-            android:clickable="true" />
-
-        <!-- Bouton "Paramètres" -->
-        <ImageButton
-            android:id="@+id/buttonParameter"
-            android:src="@drawable/bouton_parameter"
-
-            android:layout_width="@dimen/width_imageButton_footer"
-            android:layout_height="@dimen/height_imageButton_footer"
-
-            android:layout_marginTop="@dimen/marginTop_imageButton_footer"
-            android:layout_marginBottom="@dimen/marginBottom_imageButton_footer"
-
-            android:clickable="true" />
-
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent" >
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
