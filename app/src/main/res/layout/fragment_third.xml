@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:width="450dp"
+            android:height="50dp"
+
+            android:paddingStart="155dp"
+            android:paddingTop="7dp"
+
+            android:text="@string/title"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@color/greenLime"
+
+            tools:ignore="MissingConstraints" />
+
+
+    <LinearLayout
+            android:id="@+id/bottonLayout"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/greyLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Bouton "Home" -->
+        <ImageButton
+                android:id="@+id/buttonHome"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:src="@drawable/bouton_home"/>
+
+        <!-- Bouton "Panier" -->
+        <ImageButton
+                android:id="@+id/buttonShoppingBasket"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:src="@drawable/bouton_shopping_basket"/>
+
+        <!-- Bouton "Info personnel" -->
+        <ImageButton
+                android:id="@+id/buttonPersonalInformation"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:src="@drawable/bouton_personal_information"/>
+
+        <!-- Bouton "Parametre" -->
+        <ImageButton
+                android:id="@+id/buttonParameter"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:src="@drawable/bouton_parameter"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
