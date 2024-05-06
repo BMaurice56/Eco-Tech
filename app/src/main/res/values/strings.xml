@@ -9,10 +9,11 @@
 
     <string name="title">Eco Tech</string>
     <string name="search">Recherche</string>
-    <string name="shoppingBasket">Panier</string>
+    <string name="shoppingBasket">Votre Panier :</string>
     <string name="article">Article</string>
     <string name="clearShoppingBasket">Vider Panier</string>
     <string name="pay">Payer</string>
+    <string name="information">Information de l\'entreprise :</string>
     <string name="login">Se connecter</string>
     <string name="register">S\'inscrire</string>
     <!--<string name="settings">Paramètres</string>-->
