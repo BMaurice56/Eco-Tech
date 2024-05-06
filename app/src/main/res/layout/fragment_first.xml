@@ -10,74 +10,89 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textViewTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
 
-            android:background="@color/greenLime"
-            android:paddingStart="150dp"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
 
-            android:text="@string/title"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <LinearLayout
-            android:id="@+id/layoutFooter"
-
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-
-            android:background="@color/greyLight"
-
-            android:orientation="horizontal"
-
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.524"
 
-            <ImageButton
-                android:id="@+id/buttonHome"
-                android:layout_width="102dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton"
 
-                android:layout_height="@dimen/height_imageButton_footer"
+            tools:ignore="MissingConstraints" />
 
-                android:clickable="true"
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="350dp"
 
-                android:src="@drawable/bouton_home" />
+            android:layout_height="125dp"
 
-            <ImageButton
-                android:id="@+id/buttonShoppingBasket"
-                android:src="@drawable/bouton_shopping_basket"
+            android:src="@drawable/handshake"
 
-                android:layout_width="@dimen/width_imageButton_footer"
-                android:layout_height="@dimen/height_imageButton_footer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchView"
+            tools:ignore="MissingConstraints" />
 
-                android:clickable="true" />
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="350dp"
 
-            <ImageButton
-                android:id="@+id/buttonPersonalInformation"
-                android:src="@drawable/bouton_personal_information"
+            android:layout_height="125dp"
 
-                android:layout_width="@dimen/width_imageButton_footer"
-                android:layout_height="@dimen/height_imageButton_footer"
+            android:src="@drawable/environment"
 
-                android:clickable="true" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+            tools:ignore="MissingConstraints" />
 
-            <ImageButton
-                android:id="@+id/buttonParameter"
-                android:src="@drawable/bouton_parameter"
+        <TextView
+            android:id="@+id/textViewImageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-                android:layout_width="@dimen/width_imageButton_footer"
-                android:layout_height="@dimen/height_imageButton_footer"
+            android:text="@string/companyAndUs"
+            android:textColor="@color/white"
 
-                android:clickable="true" />
-        </LinearLayout>
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+            app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+            app:layout_constraintStart_toStartOf="@+id/imageButton2"
+            app:layout_constraintTop_toTopOf="@+id/imageButton2" />
 
+        <TextView
+            android:id="@+id/textViewImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/environment"
+            android:textColor="@color/white"
+
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+            app:layout_constraintEnd_toEndOf="@+id/imageButton"
+            app:layout_constraintStart_toStartOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:maxWidth="450dp"
+            android:maxHeight="50dp"
+
+            android:paddingStart="370dp"
+            android:paddingTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

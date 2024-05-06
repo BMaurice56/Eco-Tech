@@ -7,78 +7,69 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SecondFragment">
 
+    <!-- Texte "Votre Panier:" -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textViewTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/button_buy"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginVertical="30dp"
+            android:backgroundTint="@color/grey"
+            android:text="Payer"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_empty"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            android:background="@color/greenLime"
-            android:paddingStart="150dp"
-
-            android:text="@string/title"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <LinearLayout
-            android:id="@+id/layoutFooter"
-
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-
-            android:background="@color/greyLight"
-
-            android:orientation="horizontal"
-
+        <Button
+            android:id="@+id/button_empty"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginVertical="30dp"
+            android:backgroundTint="@color/grey"
+            android:text="Vider Panier"
+            android:textColor="@color/black"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_buy" />
 
-            <ImageButton
-                android:id="@+id/buttonHome"
-                android:layout_width="102dp"
+        <TextView
+            android:id="@+id/shoppingBasket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Votre Panier:"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+            tools:ignore="MissingConstraints" />
 
-                android:layout_height="@dimen/height_imageButton_footer"
-
-                android:clickable="true"
-
-                android:src="@drawable/bouton_home" />
-
-            <ImageButton
-                android:id="@+id/buttonShoppingBasket"
-                android:src="@drawable/bouton_shopping_basket"
-
-                android:layout_width="@dimen/width_imageButton_footer"
-                android:layout_height="@dimen/height_imageButton_footer"
-
-                android:clickable="true" />
-
-            <ImageButton
-                android:id="@+id/buttonPersonalInformation"
-                android:src="@drawable/bouton_personal_information"
-
-                android:layout_width="@dimen/width_imageButton_footer"
-                android:layout_height="@dimen/height_imageButton_footer"
-
-                android:clickable="true" />
-
-            <ImageButton
-                android:id="@+id/buttonParameter"
-                android:src="@drawable/bouton_parameter"
-
-                android:layout_width="@dimen/width_imageButton_footer"
-                android:layout_height="@dimen/height_imageButton_footer"
-
-                android:clickable="true" />
-        </LinearLayout>
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selectedElementsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            app:layout_constraintBottom_toTopOf="@id/button_empty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoppingBasket" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Espace réservé pour afficher les articles -->
+
+    <!-- Bouton "Vider Panier" -->
+
+    <!-- Bouton "Payer" -->
+
+    <!-- Pied de page de l'application  -->
 
 </FrameLayout>
