@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,74 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.gms.maps.MapView
-            android:id="@+id/mapView"
-
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.524"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton"
-
-            tools:ignore="MissingConstraints" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="350dp"
-
-            android:layout_height="125dp"
-
-            android:src="@drawable/handshake"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchView"
-            tools:ignore="MissingConstraints" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="350dp"
-
-            android:layout_height="125dp"
-
-            android:src="@drawable/environment"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:id="@+id/textViewImageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="@string/companyAndUs"
-            android:textColor="@color/white"
-
-            android:textSize="32sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-            app:layout_constraintStart_toStartOf="@+id/imageButton2"
-            app:layout_constraintTop_toTopOf="@+id/imageButton2" />
-
-        <TextView
-            android:id="@+id/textViewImageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="@string/environment"
-            android:textColor="@color/white"
-
-            android:textSize="32sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton"
-            app:layout_constraintStart_toStartOf="@+id/imageButton"
-            app:layout_constraintTop_toTopOf="@+id/imageButton" />
-
         <SearchView
             android:id="@+id/searchView"
             android:layout_width="wrap_content"
@@ -86,12 +19,86 @@
             android:maxWidth="450dp"
             android:maxHeight="50dp"
 
-            android:paddingStart="370dp"
-            android:paddingTop="10dp"
+            android:paddingStart="350dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
 
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:src="@drawable/handshake"
+
+            android:layout_width="350dp"
+            android:layout_height="125dp"
+
+            android:layout_marginTop="40dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/searchView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textViewImageButton"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/companyAndUs"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+
+            app:layout_constraintTop_toTopOf="@+id/imageButton"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+            app:layout_constraintStart_toStartOf="@+id/imageButton"
+            app:layout_constraintEnd_toEndOf="@+id/imageButton" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:src="@drawable/environment"
+
+            android:layout_width="350dp"
+            android:layout_height="125dp"
+
+            android:layout_marginTop="25dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/imageButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textViewImageButton2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/environment"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+
+            app:layout_constraintTop_toTopOf="@+id/imageButton2"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+            app:layout_constraintStart_toStartOf="@+id/imageButton2"
+            app:layout_constraintEnd_toEndOf="@+id/imageButton2" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+
+            android:layout_marginTop="25dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
             tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

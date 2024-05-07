@@ -7,61 +7,246 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SecondFragment">
 
-    <!-- Texte "Votre Panier:" -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button_buy"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginVertical="30dp"
-            android:backgroundTint="@color/grey"
-            android:text="Payer"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_empty"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/button_empty"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginVertical="30dp"
-            android:backgroundTint="@color/grey"
-            android:text="Vider Panier"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_buy" />
-
         <TextView
-            android:id="@+id/shoppingBasket"
+            android:id="@+id/textViewShoppingBasket"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:padding="10dp"
-            android:text="Votre Panier:"
+            android:text="Eco Shop"
             android:textColor="@color/black"
             android:textSize="22sp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/selectedElementsRecyclerView"
+        <Button
+            android:id="@+id/button_showBasket"
+
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:padding="8dp"
-            app:layout_constraintBottom_toTopOf="@id/button_empty"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"
+
+            android:text="Voir le panier"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:backgroundTint="@color/grey"
+
+            android:layout_marginVertical="10dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/shoppingBasket" />
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/textViewShoppingBasket"
+            app:layout_constraintBottom_toTopOf="@+id/button_showBasket"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:stretchColumns="0, 1"
+
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonFirstArticle"
+                        android:layout_width="50dp"
+
+                        android:layout_height="190dp"
+                        android:src="@android:drawable/btn_star" />
+
+                    <ImageButton
+                        android:id="@+id/imageButtonSecondArticle"
+                        android:layout_width="50dp"
+
+                        android:layout_height="190dp"
+                        android:src="@android:drawable/btn_star" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewNameFirstArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="NomArticle1"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textViewNameSecondArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="NomArticle2"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewPriceFirstArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="PrixArticle1"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textViewPriceSecondArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="PrixArticle2"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonThirdArticle"
+                        android:layout_width="50dp"
+
+                        android:layout_height="190dp"
+                        android:src="@android:drawable/btn_star" />
+
+                    <ImageButton
+                        android:id="@+id/imageButtonFourthArticle"
+                        android:layout_width="50dp"
+
+                        android:layout_height="190dp"
+                        android:src="@android:drawable/btn_star" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewNameThirdArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="NomArticle3"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textViewNameFourthArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="NomArticle4"
+                        android:textAlignment="center" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewPriceThirdArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="PrixArticle3"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textViewPriceFourthArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="PrixArticle4"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonFifthArticle"
+                        android:layout_width="50dp"
+
+                        android:layout_height="190dp"
+                        android:src="@android:drawable/btn_star" />
+
+                    <ImageButton
+                        android:id="@+id/imageButtonSixthArticle"
+                        android:layout_width="50dp"
+
+                        android:layout_height="190dp"
+                        android:src="@android:drawable/btn_star" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewNameFifthArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="NomArticle5"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textViewNameSixthArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="NomArticle6"
+                        android:textAlignment="center" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewPriceFifthArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="PrixArticle5"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textViewPriceSixthArticle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="PrixArticle6"
+                        android:textAlignment="center" />
+
+                </TableRow>
+
+            </TableLayout>
+        </ScrollView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Espace réservé pour afficher les articles -->
