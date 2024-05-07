@@ -2,11 +2,17 @@ package com.android.ecotech;
 
 import android.os.Bundle;
 
+import android.text.TextUtils;
+import android.widget.Button;
+import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +29,10 @@ public class ThirdFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private TextInputLayout usernameInputLayout;
+    private TextInputLayout passwordInputLayout;
+    private Button loginButton;
+    private Button registerButton;
 
     public ThirdFragment() {
         // Required empty public constructor
@@ -58,7 +68,46 @@ public class ThirdFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_third, container, false);
+        View view = inflater.inflate(R.layout.fragment_third, container, false);
+
+        usernameInputLayout = view.findViewById(R.id.editUsername);
+        passwordInputLayout = view.findViewById(R.id.editPassword);
+        loginButton = view.findViewById(R.id.button_login);
+        registerButton = view.findViewById(R.id.button_register);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Appeler une méthode pour gérer la connexion
+                login();
+            }
+        });
+
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login();
+            }
+        });
+
+        return view;
+    }
+
+    private void login() {
+        String username = Objects.requireNonNull(usernameInputLayout.getEditText()).getText().toString().trim();
+        String password = Objects.requireNonNull(passwordInputLayout.getEditText()).getText().toString().trim();
+
+        // Vérifier si les champs sont vides
+        if (TextUtils.isEmpty(username)) {
+            usernameInputLayout.setError("Veuillez entrer votre identifiant");
+            return;
+        }
+
+        if (TextUtils.isEmpty(password)) {
+            passwordInputLayout.setError("Veuillez entrer votre mot de passe");
+        }
+        else{
+            Toast.makeText(getContext().getApplicationContext(), "Connection confirmer", Toast.LENGTH_SHORT).show();
+        }
     }
 }
