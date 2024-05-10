@@ -60,27 +60,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:stretchColumns="0, 1"
-
-                >
+                android:stretchColumns="0, 1" >
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageButton
-                        android:id="@+id/imageButtonFirstArticle"
-                        android:layout_width="50dp"
+                        android:id="@+id/imageButtonArticleImprimante3D"
+                        android:src="@drawable/image_shop_imprimante3D"
 
-                        android:layout_height="190dp"
-                        android:src="@android:drawable/btn_star" />
+                        android:layout_width="50dp"
+                        android:layout_height="190dp" />
 
                     <ImageButton
-                        android:id="@+id/imageButtonSecondArticle"
-                        android:layout_width="50dp"
+                        android:id="@+id/imageButtonArticleLogitechSouris"
+                        android:src="@drawable/image_shop_souris_sans_fil"
 
+                        android:layout_width="50dp"
                         android:layout_height="190dp"
-                        android:src="@android:drawable/btn_star" />
+
+                        android:background="@color/white"/>
                 </TableRow>
 
                 <TableRow
@@ -88,17 +88,17 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textViewNameFirstArticle"
+                        android:id="@+id/textViewNameArticleImprimante3D"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="NomArticle1"
+                        android:text="Creality 3D - Imprimante 3D"
                         android:textAlignment="center" />
 
                     <TextView
-                        android:id="@+id/textViewNameSecondArticle"
+                        android:id="@+id/textViewNameArticleLogitechSouris"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="NomArticle2"
+                        android:text="Logitech - Souris sans fil"
                         android:textAlignment="center" />
                 </TableRow>
 
@@ -108,17 +108,17 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textViewPriceFirstArticle"
+                        android:id="@+id/textViewPriceArticleImprimante3D"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="PrixArticle1"
+                        android:text="220€"
                         android:textAlignment="center" />
 
                     <TextView
-                        android:id="@+id/textViewPriceSecondArticle"
+                        android:id="@+id/textViewPriceArticleLogitechSouris"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="PrixArticle2"
+                        android:text="15€"
                         android:textAlignment="center" />
                 </TableRow>
 
