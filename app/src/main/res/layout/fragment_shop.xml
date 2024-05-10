@@ -68,7 +68,7 @@
 
                     <ImageButton
                         android:id="@+id/imageButtonArticleImprimante3D"
-                        android:src="@drawable/image_shop_imprimante3D"
+                        android:src="@drawable/image_shop_imprimante_trois_d"
 
                         android:layout_width="50dp"
                         android:layout_height="190dp" />
