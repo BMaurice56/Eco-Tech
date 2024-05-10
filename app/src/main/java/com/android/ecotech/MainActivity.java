@@ -34,28 +34,28 @@ public class MainActivity extends AppCompatActivity {
         buttonParameter = findViewById(R.id.buttonParameter);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.frameLayout, new FirstFragment())
+                .replace(R.id.frameLayout, new HomeFragment())
                 .addToBackStack(null)
                 .commit();
 
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment(new FirstFragment());
+                replaceFragment(new HomeFragment());
             }
         });
 
         buttonShopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment(new SecondFragment());
+                replaceFragment(new ShopFragment());
             }
         });
 
         buttonLoginRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment(new ThirdFragment());
+                replaceFragment(new IdentificationFragment());
             }
         });
 

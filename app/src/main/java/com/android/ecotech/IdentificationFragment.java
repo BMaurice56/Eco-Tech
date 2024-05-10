@@ -16,10 +16,10 @@ import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ThirdFragment#newInstance} factory method to
+ * Use the {@link IdentificationFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ThirdFragment extends Fragment {
+public class IdentificationFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +34,7 @@ public class ThirdFragment extends Fragment {
     private Button loginButton;
     private Button registerButton;
 
-    public ThirdFragment() {
+    public IdentificationFragment() {
         // Required empty public constructor
     }
 
@@ -44,11 +44,11 @@ public class ThirdFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ThirdFragment.
+     * @return A new instance of fragment IdentificationFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ThirdFragment newInstance(String param1, String param2) {
-        ThirdFragment fragment = new ThirdFragment();
+    public static IdentificationFragment newInstance(String param1, String param2) {
+        IdentificationFragment fragment = new IdentificationFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,7 +68,7 @@ public class ThirdFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_third, container, false);
+        View view = inflater.inflate(R.layout.fragment_identification, container, false);
 
         usernameInputLayout = view.findViewById(R.id.editUsername);
         passwordInputLayout = view.findViewById(R.id.editPassword);
