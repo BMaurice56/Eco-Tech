@@ -49,11 +49,11 @@
 
                 android:clickable="true"
 
-                android:src="@drawable/bouton_home" />
+                android:src="@drawable/button_home" />
 
             <ImageButton
                 android:id="@+id/buttonShoppingBasket"
-                android:src="@drawable/bouton_shopping_basket"
+                android:src="@drawable/button_shop"
 
                 android:layout_width="@dimen/width_imageButton_footer"
                 android:layout_height="@dimen/height_imageButton_footer"
@@ -62,7 +62,7 @@
 
             <ImageButton
                 android:id="@+id/buttonPersonalInformation"
-                android:src="@drawable/bouton_personal_information"
+                android:src="@drawable/button_personal_information"
 
                 android:layout_width="@dimen/width_imageButton_footer"
                 android:layout_height="@dimen/height_imageButton_footer"
@@ -71,7 +71,7 @@
 
             <ImageButton
                 android:id="@+id/buttonParameter"
-                android:src="@drawable/bouton_parameter"
+                android:src="@drawable/button_parameter"
 
                 android:layout_width="@dimen/width_imageButton_footer"
                 android:layout_height="@dimen/height_imageButton_footer"

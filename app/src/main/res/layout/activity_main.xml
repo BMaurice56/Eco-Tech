@@ -39,7 +39,7 @@
 
             <ImageButton
                 android:id="@id/buttonHome"
-                android:src="@drawable/bouton_home"
+                android:src="@drawable/button_home"
 
                 android:layout_width="102dp"
                 android:layout_height="@dimen/height_imageButton_footer"
@@ -48,7 +48,7 @@
 
             <ImageButton
                 android:id="@id/buttonShopping"
-                android:src="@drawable/bouton_shopping_basket"
+                android:src="@drawable/button_shop"
 
                 android:layout_width="@dimen/width_imageButton_footer"
                 android:layout_height="@dimen/height_imageButton_footer"
@@ -57,7 +57,7 @@
 
             <ImageButton
                 android:id="@id/buttonLoginRegister"
-                android:src="@drawable/bouton_personal_information"
+                android:src="@drawable/button_personal_information"
 
                 android:layout_width="@dimen/width_imageButton_footer"
                 android:layout_height="@dimen/height_imageButton_footer"
@@ -66,7 +66,7 @@
 
             <ImageButton
                 android:id="@id/buttonParameter"
-                android:src="@drawable/bouton_parameter"
+                android:src="@drawable/button_parameter"
 
                 android:layout_width="@dimen/width_imageButton_footer"
                 android:layout_height="@dimen/height_imageButton_footer"
