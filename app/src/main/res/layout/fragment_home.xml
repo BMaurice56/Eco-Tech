@@ -69,7 +69,7 @@
             app:layout_constraintStart_toStartOf="@+id/imageButton2"
             app:layout_constraintEnd_toEndOf="@+id/imageButton2" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imageView"
             android:src="@drawable/image_home_map"
 
@@ -97,7 +97,7 @@
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="@+id/imageView" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imageViewNousrecrutons"
             android:src="@drawable/image_home_recruitement"
 
