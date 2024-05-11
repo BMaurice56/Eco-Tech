@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         buttonParameter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment(new FourthFragment());
+                replaceFragment(new ParameterFragment());
             }
         });
     }
