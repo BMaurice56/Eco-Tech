@@ -9,4 +9,9 @@
     <dimen name="height_imageButton_footer">50dp</dimen>
     <dimen name="marginTop_imageButton_footer">5dp</dimen>
     <dimen name="marginBottom_imageButton_footer">5dp</dimen>
+
+    <dimen name="marginTop_TITLE_fragment_parameter">50dp</dimen>
+    <dimen name="marginStart_TITLE_fragment_parameter">10dp</dimen>
+    <dimen name="marginTop_fragment_parameter">25dp</dimen>
+    <dimen name="marginStart_fragment_parameter">15dp</dimen>
 </resources>
