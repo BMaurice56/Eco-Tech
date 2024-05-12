@@ -1,11 +1,16 @@
 package com.android.ecotech;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.text.TextUtils;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,8 +36,10 @@ public class IdentificationFragment extends Fragment {
     private String mParam2;
     private TextInputLayout usernameInputLayout;
     private TextInputLayout passwordInputLayout;
-    private Button loginButton;
+    private TextView login;
     private Button registerButton;
+    private RadioGroup radioGroup;
+    private RadioButton radioButton;
 
     public IdentificationFragment() {
         // Required empty public constructor
@@ -72,14 +79,24 @@ public class IdentificationFragment extends Fragment {
 
         usernameInputLayout = view.findViewById(R.id.editUsername);
         passwordInputLayout = view.findViewById(R.id.editPassword);
-        loginButton = view.findViewById(R.id.button_login);
         registerButton = view.findViewById(R.id.button_register);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        login = view.findViewById(R.id.textViewLogin);
+
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Appeler une méthode pour gérer la connexion
                 login();
+                openNewActivity();
+            }
+        });
+
+        radioGroup = view.findViewById(R.id.radioGroup);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                radioButton = view.findViewById(checkedId);
             }
         });
 
@@ -89,6 +106,8 @@ public class IdentificationFragment extends Fragment {
                 login();
             }
         });
+
+
 
         return view;
     }
@@ -110,4 +129,13 @@ public class IdentificationFragment extends Fragment {
             Toast.makeText(getContext().getApplicationContext(), "Connection confirmer", Toast.LENGTH_SHORT).show();
         }
     }
+
+    private void openNewActivity() {
+        // Créer une intention pour démarrer une nouvelle activité
+        Intent intent = new Intent(getActivity(), LoginActivity.class);
+        // Démarrer la nouvelle activité
+        startActivity(intent);
+    }
+
+
 }

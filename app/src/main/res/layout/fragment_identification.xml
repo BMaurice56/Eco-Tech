@@ -2,6 +2,7 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container_LOGIN"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,93 +12,137 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textViewInformation"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editUsername"
+
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:width="450dp"
-            android:height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="100dp"
 
-            android:paddingStart="120dp"
-            android:text="@string/connect"
-            android:textSize="25sp"
+            android:layout_marginEnd="20dp"
+            android:hint="Numéro d'identifiant"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/baseline_person_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:inputType="text"
+                android:paddingStart="50dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editPassword"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="20dp"
+            android:hint="Mot de passe"
+
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editUsername"
+            app:startIconDrawable="@drawable/baseline_lock_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:inputType="textPassword"
+                android:paddingStart="50dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+
+            android:checkedButton="@+id/radioButtonCompany"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints,RtlSymmetry" />
+            app:layout_constraintTop_toBottomOf="@+id/editPassword">
 
-        <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editUsername"
+            <RadioButton
+                android:id="@+id/radioButtonPerson"
+
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent"
+                android:text="Particulier" />
 
-                android:layout_margin="20dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="Numéro d'identifiant"
+            <RadioButton
+                android:id="@+id/radioButtonCompany"
 
-                app:layout_constraintTop_toBottomOf="@id/textViewInformation"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-
-        <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editPassword"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-
-                android:layout_margin="20dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="Mot de passe"
-
-                app:layout_constraintTop_toBottomOf="@id/editUsername"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
+                android:text="Entreprise" />
+        </RadioGroup>
 
         <Button
-                android:id="@+id/button_register"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="100dp"
-                tools:layout_editor_absoluteX="4dp"
+            android:id="@+id/button_register"
 
-                android:backgroundTint="@color/grey"
-                android:text="@string/register"
-                android:textColor="@color/black"
-                android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-                app:layout_constraintTop_toBottomOf="@+id/editPassword"
-                tools:ignore="MissingConstraints"/>
-        <Button
-                android:id="@+id/button_login"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="100dp"
-                android:layout_marginLeft="3dp"
 
-                android:backgroundTint="@color/grey"
-                android:text="@string/login"
-                android:textColor="@color/black"
-                android:textSize="20dp"
+            android:backgroundTint="@color/grey"
+            android:text="@string/register"
+            android:textColor="@color/black"
+            android:textSize="20dp"
 
-                app:layout_constraintTop_toBottomOf="@+id/editPassword"
-                app:layout_constraintStart_toEndOf="@id/button_register"
-                tools:ignore="MissingConstraints"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="55dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/button_register"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/textViewAlreadyAccount"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Vous avez déjà un compte ?" />
+
+            <TextView
+                android:id="@+id/textViewLogin"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Connectez-vous ici"
+                android:textColor="@color/green"
+
+                android:clickable="true"
+                android:onClick="onLinkClicked"
+
+                android:paddingStart="5dp" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

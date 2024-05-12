@@ -39,12 +39,12 @@
         <item>한국어</item>
     </string-array>
 
-    
+
     <string name="appearance">APPARENCE</string>
     <string name="languages">LANGUES</string>
     <string name="confidentiality">CONFIDENTIALITE</string>
     <string name="helpInfo">AIDE &amp; INFORMATIONS</string>
-    
+
     <string name="darkMode">Mode Sombre</string>
     <string name="privacyPolicy">Politique de confidentialité</string>
     <string name="paramData">Paramètres des données</string>
