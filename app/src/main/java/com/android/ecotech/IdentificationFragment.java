@@ -10,11 +10,13 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.android.ecotech.Register.RegisterActivity;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
@@ -73,22 +75,33 @@ public class IdentificationFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_identification, container, false);
 
         usernameInputLayout = view.findViewById(R.id.editUsername);
         passwordInputLayout = view.findViewById(R.id.editPassword);
         registerButton = view.findViewById(R.id.button_register);
-
         login = view.findViewById(R.id.textViewLogin);
 
-        login.setOnClickListener(new View.OnClickListener() {
+        registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Appeler une méthode pour gérer la connexion
-                login();
-                openNewActivity();
+                verifLog();
+
+                // Obtenir la réponse sélectionnée du RadioButton
+                int radioButtonId = radioGroup.getCheckedRadioButtonId();
+                String username = usernameInputLayout.getEditText().getText().toString();
+                String password = passwordInputLayout.getEditText().getText().toString();
+
+                if (radioButtonId != -1) {
+                    radioButton = view.findViewById(radioButtonId);
+                    String responseRadioButton = radioButton.getText().toString();
+                    Snackbar.make(view, responseRadioButton, Toast.LENGTH_SHORT).show();
+                    System.out.println(responseRadioButton);
+                    openRegisterActivity(responseRadioButton, username, password);
+                } else {
+                    Snackbar.make(view, "Aucun choix sélectionné", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -100,10 +113,11 @@ public class IdentificationFragment extends Fragment {
             }
         });
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                login();
+                verifLog();
+                openLoginActivity();
             }
         });
 
@@ -112,7 +126,7 @@ public class IdentificationFragment extends Fragment {
         return view;
     }
 
-    private void login() {
+    private void verifLog() {
         String username = Objects.requireNonNull(usernameInputLayout.getEditText()).getText().toString().trim();
         String password = Objects.requireNonNull(passwordInputLayout.getEditText()).getText().toString().trim();
 
@@ -126,16 +140,30 @@ public class IdentificationFragment extends Fragment {
             passwordInputLayout.setError("Veuillez entrer votre mot de passe");
         }
         else{
-            Toast.makeText(getContext().getApplicationContext(), "Connection confirmer", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext().getApplicationContext(), "Connection confirmé", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void openNewActivity() {
+
+    private void openLoginActivity() {
         // Créer une intention pour démarrer une nouvelle activité
         Intent intent = new Intent(getActivity(), LoginActivity.class);
+
         // Démarrer la nouvelle activité
         startActivity(intent);
     }
 
+    private void openRegisterActivity(String responseRadioButton, String username, String password) {
+        // Créer une intention pour démarrer une nouvelle activité
+        Intent intent = new Intent(getActivity(), RegisterActivity.class);
+
+        // Ajouter la réponse
+        intent.putExtra("responseRadioButton", responseRadioButton);
+        intent.putExtra("username", username);
+        intent.putExtra("password", password);
+
+        // Démarrer la nouvelle activité
+        startActivity(intent);
+    }
 
 }
