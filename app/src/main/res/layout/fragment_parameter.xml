@@ -12,12 +12,12 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textViewAPPARENCE"
+            android:id="@+id/textViewAPPEARANCE"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="APPARENCE"
+            android:text="@string/appearance"
             android:textStyle="bold"
             android:textSize="18sp"
 
@@ -27,18 +27,18 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Switch
-            android:id="@+id/switchDarkMod"
+            android:id="@+id/switchDarkMode"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="Mode Sombre"
+            android:text="@string/darkMode"
             android:paddingEnd="260dp"
 
             android:layout_marginTop="@dimen/marginTop_fragment_parameter"
             android:layout_marginStart="@dimen/marginStart_fragment_parameter"
 
-            app:layout_constraintTop_toBottomOf="@id/textViewAPPARENCE"
+            app:layout_constraintTop_toBottomOf="@id/textViewAPPEARANCE"
             app:layout_constraintStart_toStartOf="parent"
 
             tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -49,14 +49,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="LANGUES"
+            android:text="@string/languages"
             android:textStyle="bold"
             android:textSize="18sp"
 
             android:layout_marginTop="@dimen/marginTop_TITLE_fragment_parameter"
             android:layout_marginStart="@dimen/marginStart_TITLE_fragment_parameter"
 
-            app:layout_constraintTop_toBottomOf="@+id/switchDarkMod"
+            app:layout_constraintTop_toBottomOf="@+id/switchDarkMode"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Spinner
@@ -79,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="CONFIDENTIALITE"
+            android:text="@string/confidentiality"
             android:textStyle="bold"
             android:textSize="18sp"
 
@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="Politique de confidentialité"
+            android:text="@string/privacyPolicy"
 
             android:clickable="true"
             android:onClick="onLinkClicked"
@@ -112,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="Paramètres des données"
+            android:text="@string/paramData"
 
             android:clickable="true"
             android:onClick="onLinkClicked"
@@ -129,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="AIDE &amp; INFORMATIONS"
+            android:text="@string/helpInfo"
             android:textStyle="bold"
             android:textSize="18sp"
 
@@ -145,7 +145,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="Livraisons et retours"
+            android:text="@string/deliveryReturns"
 
             android:clickable="true"
             android:onClick="onLinkClicked"
@@ -162,7 +162,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="FAQ"
+            android:text="@string/faq"
 
             android:clickable="true"
             android:onClick="onLinkClicked"
@@ -179,7 +179,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="Conditions Générales de Vente"
+            android:text="@string/generalConditions"
 
             android:clickable="true"
             android:onClick="onLinkClicked"
@@ -196,7 +196,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="Mentions Légales"
+            android:text="@string/legalNotice"
 
             android:clickable="true"
             android:onClick="onLinkClicked"

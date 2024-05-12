@@ -13,9 +13,9 @@
     <string name="article">Article</string>
     <string name="clearShoppingBasket">Vider Panier</string>
     <string name="pay">Payer</string>
-    <string name="connect">Connexion :</string>
-    <string name="username">Numéro d\'identifiant :</string>
-    <string name="password">Mot de passe :</string>
+    <string name="connect">Connexion</string>
+    <string name="username">Numéro d\'identifiant</string>
+    <string name="password">Mot de passe</string>
     <string name="login">Se connecter</string>
     <string name="register">S\'inscrire</string>
     <!--<string name="settings">Paramètres</string>-->
@@ -23,6 +23,7 @@
 
     <string name="environment">Nos engagements</string>
     <string name="companyAndUs">Votre entreprise et nous</string>
+
 
     <string-array name="languages">
         <item>Français</item>
@@ -37,5 +38,19 @@
         <item>Italiano</item>
         <item>한국어</item>
     </string-array>
+
+    
+    <string name="appearance">APPARENCE</string>
+    <string name="languages">LANGUES</string>
+    <string name="confidentiality">CONFIDENTIALITE</string>
+    <string name="helpInfo">AIDE &amp; INFORMATIONS</string>
+    
+    <string name="darkMode">Mode Sombre</string>
+    <string name="privacyPolicy">Politique de confidentialité</string>
+    <string name="paramData">Paramètres des données</string>
+    <string name="deliveryReturns">Livraisons et retours</string>
+    <string name="faq">FAQ</string>
+    <string name="generalConditions">Conditions Générales de Vente</string>
+    <string name="legalNotice">Mentions Légales</string>
 
 </resources>
