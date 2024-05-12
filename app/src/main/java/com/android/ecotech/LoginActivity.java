@@ -9,17 +9,24 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 public class LoginActivity extends AppCompatActivity {
     private EditText usernameEditText;
     private EditText passwordEditText;
+    private TextInputLayout usernameTextInputLayout;
+    private TextInputLayout passwordTextInputLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        usernameEditText = findViewById(R.id.username);
-        passwordEditText = findViewById(R.id.password);
+        usernameTextInputLayout = findViewById(R.id.username);
+        passwordTextInputLayout = findViewById(R.id.password);
+
+        usernameEditText = usernameTextInputLayout.getEditText();
+        passwordEditText = passwordTextInputLayout.getEditText();
 
         Button loginButton = findViewById(R.id.button_login);
         loginButton.setOnClickListener(new View.OnClickListener() {
