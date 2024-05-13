@@ -36,6 +36,6 @@ public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
     @Override
     public int getItemCount() {
         // Retourne le nombre total de fragments à afficher
-        return 3; // Changez 3 par le nombre total de fragments que vous avez
+        return 5;
     }
 }
