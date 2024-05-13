@@ -24,6 +24,7 @@
 
     <Spinner
         android:id="@+id/spinnerContent"
+        android:entries="@array/choiceRegister"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,7 +63,7 @@
 
         android:visibility="invisible"
 
-        app:layout_constraintTop_toBottomOf="@+id/spinnerContent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewContent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

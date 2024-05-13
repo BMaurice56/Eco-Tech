@@ -24,6 +24,11 @@
     <string name="environment">Nos engagements</string>
     <string name="companyAndUs">Votre entreprise et nous</string>
 
+    <string-array name="choiceRegister">
+        <item>Particulier</item>
+        <item>Entreprise</item>
+    </string-array>
+
 
     <string-array name="languages">
         <item>Français</item>
