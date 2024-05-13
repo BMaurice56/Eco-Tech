@@ -14,7 +14,7 @@ public class RegisterFragmentFactory implements FragmentFactory {
         // Ajoute le texte dans les arguments du fragment
         args.putString("text", text);
 
-        // Ajoute un booléen qui indique si un ou plusieurs éléments doivent être visibles ou non
+        // Ajoute un entier qui indique si un ou plusieurs éléments doivent être visibles ou non
         args.putInt("showElements", showElements);
 
         // Définit les arguments du fragment

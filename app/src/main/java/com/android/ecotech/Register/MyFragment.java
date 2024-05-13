@@ -39,15 +39,12 @@ public class MyFragment extends Fragment {
 
         // Récupère le texte passé en argument
         String text = getArguments().getString("text");
-        // Récupère le booléen pour déterminer si un ou plusieurs éléments doivent être visible ou non
-        int showNewElements = getArguments().getInt("showNewElements", 0);
-
 
         // Met à jour le texte du TextView avec le texte passé en argument
         textViewContent.setText(text);
 
         // Rend les éléments visibles ou invisibles en fonction de la valeur de l'indicateur
-        switch (showNewElements) {
+        switch (getArguments().getInt("showElements")) {
             case 1:
                 spinnerContent.setVisibility(View.VISIBLE);
                 buttonConfirmation.setVisibility(View.VISIBLE);
@@ -56,7 +53,7 @@ public class MyFragment extends Fragment {
                 editTextText.setVisibility(View.VISIBLE);
                 buttonConfirmation.setVisibility(View.VISIBLE);
                 break;
-            case 0:
+            default:
                 break;
         }
 

@@ -24,7 +24,7 @@ public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
             case 2:
                 return fragmentFactory.createFragment("Vous êtes bien une ... ?", 1);
             case 3:
-                return fragmentFactory.createFragment("Ceci est-il bien votre nom ?", 0);
+                return fragmentFactory.createFragment("Ceci est-il bien votre nom ?", 2);
             case 4:
                 return fragmentFactory.createFragment("Nous vous remercions pour vos réponses :)", 0);
             default:
