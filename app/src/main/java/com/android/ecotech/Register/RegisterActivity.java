@@ -1,10 +1,8 @@
 package com.android.ecotech.Register;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -30,16 +28,6 @@ public class RegisterActivity extends AppCompatActivity {
         FragmentFactory fragmentFactory = new RegisterFragmentFactory();
         pagerAdapter = new RegisterFragmentStateAdapter(this, fragmentFactory);
         viewPager2.setAdapter(pagerAdapter);
-
-        // Récupérer la réponse du RadioButton depuis l'intention
-        Intent intent = getIntent();
-        if (intent != null && intent.hasExtra("responseRadioButton")) {
-            String response = intent.getStringExtra("responseRadioButton");
-            System.out.println(response);
-        }
-
-        String username = intent.getStringExtra("username");
-        String password = intent.getStringExtra("password");
 
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {

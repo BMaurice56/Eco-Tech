@@ -96,8 +96,6 @@ public class IdentificationFragment extends Fragment {
                 if (radioButtonId != -1) {
                     radioButton = view.findViewById(radioButtonId);
                     String responseRadioButton = radioButton.getText().toString();
-                    Snackbar.make(view, responseRadioButton, Toast.LENGTH_SHORT).show();
-                    System.out.println(responseRadioButton);
                     openRegisterActivity(responseRadioButton, username, password);
                 } else {
                     Snackbar.make(view, "Aucun choix sélectionné", Toast.LENGTH_SHORT).show();
@@ -157,10 +155,10 @@ public class IdentificationFragment extends Fragment {
         // Créer une intention pour démarrer une nouvelle activité
         Intent intent = new Intent(getActivity(), RegisterActivity.class);
 
-        // Ajouter la réponse
-        intent.putExtra("responseRadioButton", responseRadioButton);
-        intent.putExtra("username", username);
-        intent.putExtra("password", password);
+        UserInfo userInfo = UserInfo.getInstance();
+        userInfo.setUsername(username);
+        userInfo.setPassword(password);
+        userInfo.setRadioButtonResponse(responseRadioButton);
 
         // Démarrer la nouvelle activité
         startActivity(intent);
