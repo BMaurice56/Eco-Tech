@@ -7,206 +7,211 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ParameterFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" >
 
-        <TextView
-            android:id="@+id/textViewAPPEARANCE"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="@string/appearance"
-            android:textStyle="bold"
-            android:textSize="18sp"
-
-            android:layout_marginStart="@dimen/marginStart_TITLE_fragment_parameter"
-
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Switch
-            android:id="@+id/switchDarkMode"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="@string/darkMode"
-            android:paddingEnd="260dp"
-
-            android:layout_marginTop="@dimen/marginTop_fragment_parameter"
-            android:layout_marginStart="@dimen/marginStart_fragment_parameter"
-
-            app:layout_constraintTop_toBottomOf="@id/textViewAPPEARANCE"
-            app:layout_constraintStart_toStartOf="parent"
-
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-        <TextView
-            android:id="@+id/textViewLANGUES"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="@string/languages"
-            android:textStyle="bold"
-            android:textSize="18sp"
-
-            android:layout_marginTop="@dimen/marginTop_TITLE_fragment_parameter"
-            android:layout_marginStart="@dimen/marginStart_TITLE_fragment_parameter"
-
-            app:layout_constraintTop_toBottomOf="@+id/switchDarkMode"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Spinner
-            android:id="@+id/spinner"
-            android:entries="@array/languages"
-
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content">
 
-            android:layout_marginTop="@dimen/marginTop_fragment_parameter"
-            android:layout_marginStart="@dimen/marginStart_fragment_parameter"
+            <TextView
+                android:id="@+id/textViewAPPEARANCE"
 
-            app:layout_constraintTop_toBottomOf="@+id/textViewLANGUES"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-        <TextView
-            android:id="@+id/textViewCONFIDENTIALITE"
+                android:layout_marginStart="@dimen/marginStart_TITLE_fragment_parameter"
+                android:text="@string/appearance"
+                android:textSize="18sp"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+                android:textStyle="bold"
 
-            android:text="@string/confidentiality"
-            android:textStyle="bold"
-            android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            android:layout_marginTop="@dimen/marginTop_TITLE_fragment_parameter"
-            android:layout_marginStart="@dimen/marginStart_TITLE_fragment_parameter"
+            <Switch
+                android:id="@+id/switchDarkMode"
 
-            app:layout_constraintTop_toBottomOf="@+id/spinner"
-            app:layout_constraintStart_toStartOf="parent" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-        <TextView
-            android:id="@+id/textViewPol_Of_Conf"
+                android:layout_marginStart="@dimen/marginStart_fragment_parameter"
+                android:layout_marginTop="@dimen/marginTop_fragment_parameter"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+                android:paddingEnd="260dp"
+                android:text="@string/darkMode"
 
-            android:text="@string/privacyPolicy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewAPPEARANCE"
 
-            android:clickable="true"
-            android:onClick="onLinkClicked"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-            android:layout_marginTop="@dimen/marginTop_fragment_parameter"
-            android:layout_marginStart="@dimen/marginStart_fragment_parameter"
+            <TextView
+                android:id="@+id/textViewLANGUES"
 
-            app:layout_constraintTop_toBottomOf="@+id/textViewCONFIDENTIALITE"
-            app:layout_constraintStart_toStartOf="parent" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-        <TextView
-            android:id="@+id/textViewParamData"
+                android:layout_marginStart="@dimen/marginStart_TITLE_fragment_parameter"
+                android:layout_marginTop="@dimen/marginTop_TITLE_fragment_parameter"
+                android:text="@string/languages"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
 
-            android:text="@string/paramData"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switchDarkMode" />
 
-            android:clickable="true"
-            android:onClick="onLinkClicked"
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
 
-            android:layout_marginTop="@dimen/marginTop_fragment_parameter"
-            android:layout_marginStart="@dimen/marginStart_fragment_parameter"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStart_fragment_parameter"
 
-            app:layout_constraintTop_toBottomOf="@+id/textViewPol_Of_Conf"
-            app:layout_constraintStart_toStartOf="parent" />
+                android:layout_marginTop="@dimen/marginTop_fragment_parameter"
+                android:entries="@array/languages"
 
-        <TextView
-            android:id="@+id/textViewHELP_AND_INFO"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLANGUES" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/textViewCONFIDENTIALITE"
 
-            android:text="@string/helpInfo"
-            android:textStyle="bold"
-            android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-            android:layout_marginTop="@dimen/marginTop_TITLE_fragment_parameter"
-            android:layout_marginStart="@dimen/marginStart_TITLE_fragment_parameter"
+                android:layout_marginStart="@dimen/marginStart_TITLE_fragment_parameter"
+                android:layout_marginTop="@dimen/marginTop_TITLE_fragment_parameter"
+                android:text="@string/confidentiality"
 
-            app:layout_constraintTop_toBottomOf="@+id/textViewParamData"
-            app:layout_constraintStart_toStartOf="parent" />
+                android:textSize="18sp"
+                android:textStyle="bold"
 
-        <TextView
-            android:id="@+id/textViewDelivery_Returns"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/textViewPol_Of_Conf"
 
-            android:text="@string/deliveryReturns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-            android:clickable="true"
-            android:onClick="onLinkClicked"
+                android:layout_marginStart="@dimen/marginStart_fragment_parameter"
 
-            android:layout_marginTop="@dimen/marginTop_fragment_parameter"
-            android:layout_marginStart="@dimen/marginStart_fragment_parameter"
+                android:layout_marginTop="@dimen/marginTop_fragment_parameter"
+                android:clickable="true"
 
-            app:layout_constraintTop_toBottomOf="@+id/textViewHELP_AND_INFO"
-            app:layout_constraintStart_toStartOf="parent" />
+                android:onClick="onLinkClicked"
+                android:text="@string/privacyPolicy"
 
-        <TextView
-            android:id="@+id/textViewFAQ"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCONFIDENTIALITE" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/textViewParamData"
 
-            android:text="@string/faq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-            android:clickable="true"
-            android:onClick="onLinkClicked"
+                android:layout_marginStart="@dimen/marginStart_fragment_parameter"
 
-            android:layout_marginTop="@dimen/marginTop_fragment_parameter"
-            android:layout_marginStart="@dimen/marginStart_fragment_parameter"
+                android:layout_marginTop="@dimen/marginTop_fragment_parameter"
+                android:clickable="true"
 
-            app:layout_constraintTop_toBottomOf="@+id/textViewDelivery_Returns"
-            app:layout_constraintStart_toStartOf="parent" />
+                android:onClick="onLinkClicked"
+                android:text="@string/paramData"
 
-        <TextView
-            android:id="@+id/textViewGeneral_Conditions"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPol_Of_Conf" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/textViewHELP_AND_INFO"
 
-            android:text="@string/generalConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-            android:clickable="true"
-            android:onClick="onLinkClicked"
+                android:layout_marginStart="@dimen/marginStart_TITLE_fragment_parameter"
+                android:layout_marginTop="@dimen/marginTop_TITLE_fragment_parameter"
+                android:text="@string/helpInfo"
 
-            android:layout_marginTop="@dimen/marginTop_fragment_parameter"
-            android:layout_marginStart="@dimen/marginStart_fragment_parameter"
+                android:textSize="18sp"
+                android:textStyle="bold"
 
-            app:layout_constraintTop_toBottomOf="@+id/textViewFAQ"
-            app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewParamData" />
 
-        <TextView
-            android:id="@+id/textViewLegalNotice"
+            <TextView
+                android:id="@+id/textViewDelivery_Returns"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-            android:text="@string/legalNotice"
+                android:layout_marginStart="@dimen/marginStart_fragment_parameter"
 
-            android:clickable="true"
-            android:onClick="onLinkClicked"
+                android:layout_marginTop="@dimen/marginTop_fragment_parameter"
+                android:clickable="true"
 
-            android:layout_marginTop="@dimen/marginTop_fragment_parameter"
-            android:layout_marginStart="@dimen/marginStart_fragment_parameter"
+                android:onClick="onLinkClicked"
+                android:text="@string/deliveryReturns"
 
-            app:layout_constraintTop_toBottomOf="@+id/textViewGeneral_Conditions"
-            app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewHELP_AND_INFO" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/textViewFAQ"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/marginStart_fragment_parameter"
+
+                android:layout_marginTop="@dimen/marginTop_fragment_parameter"
+                android:clickable="true"
+
+                android:onClick="onLinkClicked"
+                android:text="@string/faq"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDelivery_Returns" />
+
+            <TextView
+                android:id="@+id/textViewGeneral_Conditions"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/marginStart_fragment_parameter"
+
+                android:layout_marginTop="@dimen/marginTop_fragment_parameter"
+                android:clickable="true"
+
+                android:onClick="onLinkClicked"
+                android:text="@string/generalConditions"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFAQ" />
+
+            <TextView
+                android:id="@+id/textViewLegalNotice"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/marginStart_fragment_parameter"
+
+                android:layout_marginTop="@dimen/marginTop_fragment_parameter"
+                android:clickable="true"
+
+                android:onClick="onLinkClicked"
+                android:text="@string/legalNotice"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGeneral_Conditions" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </FrameLayout>
