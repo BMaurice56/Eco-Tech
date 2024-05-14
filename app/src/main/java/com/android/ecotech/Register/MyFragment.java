@@ -17,21 +17,12 @@ import androidx.fragment.app.Fragment;
 import com.android.ecotech.R;
 import com.android.ecotech.UserInfo;
 
-public class MyFragment extends Fragment implements OnNextButtonClickListener {
+public class MyFragment extends Fragment {
     private TextView textViewContent;
     private TextView textViewName;
     private Spinner spinnerContent;
     private EditText editTextMail;
     private Button buttonConfirmation;
-
-    // Variable pour stocker l'instance de l'interface
-    private OnNextButtonClickListener onNextButtonClickListener;
-
-    // Ajoute une méthode pour définir l'instance de l'interface
-    public void setOnNextButtonClickListener(OnNextButtonClickListener listener) {
-        this.onNextButtonClickListener = listener;
-    }
-
 
     @Nullable
     @Override
@@ -102,33 +93,14 @@ public class MyFragment extends Fragment implements OnNextButtonClickListener {
         buttonConfirmation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (onNextButtonClickListener != null) {
-                    onNextButtonClickListener.onNextButtonClicked();
+                RegisterActivity activity = (RegisterActivity) getActivity();
+                if (activity != null) {
+                    activity.moveToNextFragment();
                 }
             }
         });
 
         // Retourne la vue du fragment
         return view;
-    }
-
-    private void stopAutoPageChange() {
-        if (getActivity() instanceof RegisterActivity) {
-            RegisterActivity activity = (RegisterActivity) getActivity();
-            activity.stopAutoPageChange();
-        }
-    }
-
-    @Override
-    public void onNextButtonClicked() {
-        RegisterActivity activity = (RegisterActivity) getActivity();
-
-        if (activity != null) {
-            activity.onNextButtonClicked();
-        }
-    }
-
-    public interface OnNextButtonClickListener {
-        void onNextButtonClicked();
     }
 }

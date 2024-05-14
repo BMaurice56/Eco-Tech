@@ -12,12 +12,11 @@ import com.android.ecotech.R;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class RegisterActivity extends AppCompatActivity implements OnNextButtonClickListener {
+public class RegisterActivity extends AppCompatActivity {
     private ViewPager2 viewPager2;
     private RegisterFragmentStateAdapter pagerAdapter;
     private static final long DELAY_MS = 5000;
     private static final long PERIOD_MS = 5000;
-
     private Timer timer;
 
     @Override
@@ -30,16 +29,6 @@ public class RegisterActivity extends AppCompatActivity implements OnNextButtonC
         FragmentFactory fragmentFactory = new RegisterFragmentFactory();
         pagerAdapter = new RegisterFragmentStateAdapter(this, fragmentFactory);
         viewPager2.setAdapter(pagerAdapter);
-
-        // Instance de l'interface pour communiquer avec MyFragment
-        pagerAdapter.setOnNextButtonClickListener(new MyFragment.OnNextButtonClickListener() {
-            public void onNextButtonClicked() {
-                int currentItem = viewPager2.getCurrentItem();
-                if (currentItem < pagerAdapter.getItemCount() - 1) {
-                    viewPager2.setCurrentItem(currentItem + 1);
-                }
-            }
-        });
 
         // Initialisation du Timer
         timer = new Timer();
@@ -69,14 +58,6 @@ public class RegisterActivity extends AppCompatActivity implements OnNextButtonC
     public void stopAutoPageChange() {
         if (timer != null) {
             timer.cancel();
-        }
-    }
-
-    @Override
-    public void onNextButtonClicked() {
-        int currentItem = viewPager2.getCurrentItem();
-        if (currentItem < pagerAdapter.getItemCount() - 1) {
-            viewPager2.setCurrentItem(currentItem + 1);
         }
     }
 

@@ -7,7 +7,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
     private final FragmentFactory fragmentFactory;
-    private MyFragment.OnNextButtonClickListener onNextButtonClickListener;
 
     public RegisterFragmentStateAdapter(@NonNull FragmentActivity fragmentActivity, FragmentFactory fragmentFactory) {
         super(fragmentActivity);
@@ -44,9 +43,5 @@ public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
     public int getItemCount() {
         // Retourne le nombre total de fragments à afficher
         return 8;
-    }
-
-    public void setOnNextButtonClickListener(MyFragment.OnNextButtonClickListener listener) {
-        this.onNextButtonClickListener = listener;
     }
 }
