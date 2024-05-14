@@ -5,6 +5,7 @@ public class UserInfo {
     private String username;
     private String password;
     private String radioButtonResponse;
+    private String mail;
 
     private UserInfo() {}
 
@@ -19,13 +20,13 @@ public class UserInfo {
         return username;
     }
 
-    public String getPassword() {
-        return password;
-    }
+    public String getPassword() { return password; }
 
     public String getRadioButtonResponse() {
         return radioButtonResponse;
     }
+
+    public String getMail() { return mail; }
 
     public void setUsername(String username) {
         this.username = username;
@@ -37,5 +38,9 @@ public class UserInfo {
 
     public void setRadioButtonResponse(String radioButtonResponse) {
         this.radioButtonResponse = radioButtonResponse;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 }

@@ -25,8 +25,8 @@
     <string name="companyAndUs">Votre entreprise et nous</string>
 
     <string-array name="choiceRegister">
-        <item>Particulier</item>
-        <item>Entreprise</item>
+        <item>Un particulier</item>
+        <item>Une entreprise</item>
     </string-array>
 
 

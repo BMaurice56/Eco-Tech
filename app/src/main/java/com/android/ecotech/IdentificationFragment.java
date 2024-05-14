@@ -86,19 +86,19 @@ public class IdentificationFragment extends Fragment {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                verifLog();
+                if (verifLog()) {
+                    // Obtenir la réponse sélectionnée du RadioButton
+                    int radioButtonId = radioGroup.getCheckedRadioButtonId();
+                    String username = usernameInputLayout.getEditText().getText().toString();
+                    String password = passwordInputLayout.getEditText().getText().toString();
 
-                // Obtenir la réponse sélectionnée du RadioButton
-                int radioButtonId = radioGroup.getCheckedRadioButtonId();
-                String username = usernameInputLayout.getEditText().getText().toString();
-                String password = passwordInputLayout.getEditText().getText().toString();
-
-                if (radioButtonId != -1) {
-                    radioButton = view.findViewById(radioButtonId);
-                    String responseRadioButton = radioButton.getText().toString();
-                    openRegisterActivity(responseRadioButton, username, password);
-                } else {
-                    Snackbar.make(view, "Aucun choix sélectionné", Toast.LENGTH_SHORT).show();
+                    if (radioButtonId != -1) {
+                        radioButton = view.findViewById(radioButtonId);
+                        String responseRadioButton = radioButton.getText().toString();
+                        openRegisterActivity(responseRadioButton, username, password);
+                    } else {
+                        Snackbar.make(view, "Aucun choix sélectionné", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -124,22 +124,16 @@ public class IdentificationFragment extends Fragment {
         return view;
     }
 
-    private void verifLog() {
+    private boolean verifLog() {
         String username = Objects.requireNonNull(usernameInputLayout.getEditText()).getText().toString().trim();
         String password = Objects.requireNonNull(passwordInputLayout.getEditText()).getText().toString().trim();
 
         // Vérifier si les champs sont vides
-        if (TextUtils.isEmpty(username)) {
-            usernameInputLayout.setError("Veuillez entrer votre identifiant");
-            return;
+        if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
+            Toast.makeText(getContext().getApplicationContext(), "Identifiant ou Mot de passe vide", Toast.LENGTH_SHORT).show();
+            return false;
         }
-
-        if (TextUtils.isEmpty(password)) {
-            passwordInputLayout.setError("Veuillez entrer votre mot de passe");
-        }
-        else{
-            Toast.makeText(getContext().getApplicationContext(), "Connection confirmé", Toast.LENGTH_SHORT).show();
-        }
+        return true;
     }
 
 

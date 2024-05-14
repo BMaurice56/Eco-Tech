@@ -22,11 +22,17 @@ public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
             case 1:
                 return fragmentFactory.createFragment("Afin de mieux vous aidez, nous aimerions vous poser quelques questions", 0);
             case 2:
-                return fragmentFactory.createFragment("Vous êtes bien une ... ?", 1);
+                return fragmentFactory.createFragment("Vous pourrez modifier vos réponses à la fin du QCM ;)", 0);
             case 3:
-                return fragmentFactory.createFragment("Ceci est-il bien votre nom ?", 2);
+                return fragmentFactory.createFragment("Vous êtes ?", 1);
             case 4:
-                return fragmentFactory.createFragment("Nous vous remercions pour vos réponses :)", 0);
+                return fragmentFactory.createFragment("Ceci est-il bien votre nom ?", 2);
+            case 5:
+                return fragmentFactory.createFragment("Ceci est-il bien votre mot de passe ?", 3);
+            case 6:
+                return fragmentFactory.createFragment("Entrez votre mail :", 4);
+            case 7:
+                return fragmentFactory.createFragment("Nous vous remercions pour vos réponses", 0);
             default:
                 // Gestion de cas invalide, retourne un fragment vide
                 return new Fragment();
@@ -36,6 +42,6 @@ public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
     @Override
     public int getItemCount() {
         // Retourne le nombre total de fragments à afficher
-        return 5;
+        return 8;
     }
 }
