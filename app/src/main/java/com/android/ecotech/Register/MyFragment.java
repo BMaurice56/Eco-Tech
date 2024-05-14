@@ -54,22 +54,18 @@ public class MyFragment extends Fragment {
         switch (getArguments().getInt("showElements")) {
             case 1:
                 spinnerContent.setVisibility(View.VISIBLE);
-                //buttonConfirmation.setVisibility(View.VISIBLE);
                 break;
             case 2:
                 textViewName.setText(userInfo.getUsername());
                 textViewName.setVisibility(View.VISIBLE);
-                //buttonConfirmation.setVisibility(View.VISIBLE);
                 break;
             case 3:
                 textViewName.setText(userInfo.getPassword());
                 textViewName.setVisibility(View.VISIBLE);
-                //buttonConfirmation.setVisibility(View.VISIBLE);
                 break;
             case 4:
                 editTextMail.setVisibility(View.VISIBLE);
                 userInfo.setMail(String.valueOf(editTextMail.getText()));
-                //buttonConfirmation.setVisibility(View.VISIBLE);
                 break;
             default:
                 break;
