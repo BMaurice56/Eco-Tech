@@ -144,17 +144,17 @@
 
                     <ImageButton
                         android:id="@+id/imageButtonThirdArticle"
-                        android:layout_width="50dp"
+                        android:src="@drawable/image_shop_imprimante_photocopieuse"
 
-                        android:layout_height="190dp"
-                        android:src="@android:drawable/btn_star" />
+                        android:layout_width="50dp"
+                        android:layout_height="190dp"/>
 
                     <ImageButton
                         android:id="@+id/imageButtonFourthArticle"
-                        android:layout_width="50dp"
+                        android:src="@drawable/image_shop_ecran_pc"
 
-                        android:layout_height="190dp"
-                        android:src="@android:drawable/btn_star" />
+                        android:layout_width="50dp"
+                        android:layout_height="190dp"/>
 
                 </TableRow>
 
@@ -167,14 +167,14 @@
                         android:id="@+id/textViewNameThirdArticle"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="NomArticle3"
+                        android:text="Photocopieur multifonction monochrome A3/A4 E-STUDIO 3008A"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/textViewNameFourthArticle"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="NomArticle4"
+                        android:text="Ecrans LCD 17`` - sortie VGA et/ou DVI."
                         android:textAlignment="center" />
 
                 </TableRow>
@@ -188,14 +188,14 @@
                         android:id="@+id/textViewPriceThirdArticle"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="PrixArticle3"
+                        android:text="1000€"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/textViewPriceFourthArticle"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="PrixArticle4"
+                        android:text="30€"
                         android:textAlignment="center" />
                 </TableRow>
 
@@ -205,17 +205,17 @@
 
                     <ImageButton
                         android:id="@+id/imageButtonFifthArticle"
-                        android:layout_width="50dp"
+                        android:src="@drawable/image_shop_tour_pc"
 
-                        android:layout_height="190dp"
-                        android:src="@android:drawable/btn_star" />
+                        android:layout_width="50dp"
+                        android:layout_height="190dp"/>
 
                     <ImageButton
                         android:id="@+id/imageButtonSixthArticle"
-                        android:layout_width="50dp"
+                        android:src="@drawable/image_shop_ordinateur_portable"
 
-                        android:layout_height="190dp"
-                        android:src="@android:drawable/btn_star" />
+                        android:layout_width="50dp"
+                        android:layout_height="190dp"/>
                 </TableRow>
 
                 <TableRow
@@ -227,14 +227,14 @@
                         android:id="@+id/textViewNameFifthArticle"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="NomArticle5"
+                        android:text="Altyk Le Grand PC Entreprise P1-I716-M05-2"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/textViewNameSixthArticle"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="NomArticle6"
+                        android:text="Lenovo thinkpad L390 - Windows 10"
                         android:textAlignment="center" />
 
                 </TableRow>
@@ -248,14 +248,14 @@
                         android:id="@+id/textViewPriceFifthArticle"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="PrixArticle5"
+                        android:text="750€"
                         android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/textViewPriceSixthArticle"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="PrixArticle6"
+                        android:text="500€"
                         android:textAlignment="center" />
 
                 </TableRow>
