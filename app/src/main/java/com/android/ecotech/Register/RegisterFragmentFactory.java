@@ -8,7 +8,7 @@ public class RegisterFragmentFactory implements FragmentFactory {
     @Override
     // Crée un fragment MyFragment
     public Fragment createFragment(String text, int showElements) {
-        MyFragment fragment = new MyFragment();
+        PersonalizedFragment fragment = new PersonalizedFragment();
         Bundle args = new Bundle();
 
         // Ajoute le texte dans les arguments du fragment

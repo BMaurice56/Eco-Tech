@@ -13,10 +13,15 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class RegisterActivity extends AppCompatActivity {
+
     private ViewPager2 viewPager2;
+
     private RegisterFragmentStateAdapter pagerAdapter;
+
     private long delayMs = 7500;
+
     private static final long PERIOD_MS = 5000;
+
     private Timer timer;
 
     @Override

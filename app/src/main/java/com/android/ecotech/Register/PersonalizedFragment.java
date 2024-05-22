@@ -25,13 +25,20 @@ import com.android.ecotech.UserInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyFragment extends Fragment {
+public class PersonalizedFragment extends Fragment {
+
     private TextView textViewContent;
+
     private TextView textViewName;
+
     private Spinner spinnerContent;
+
     private EditText editTextMail;
+
     private EditText editTextComment;
+
     private Button buttonConfirmation;
+
     private LinearLayout checkboxContainer;
 
     @Nullable
