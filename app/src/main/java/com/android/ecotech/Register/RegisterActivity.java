@@ -14,11 +14,20 @@ import java.util.TimerTask;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private ViewPager2 viewPager2; // Composant ViewPager2 pour afficher les fragments
-    private RegisterFragmentStateAdapter pagerAdapter; // Adaptateur pour les fragments
-    private long delayMs = 7500; // Délai initial en millisecondes avant de changer de page
-    private static final long PERIOD_MS = 5000; // Intervalle de temps en millisecondes entre les changements de page
-    private Timer timer; // Timer pour gérer les changements automatiques de page
+    // Composant ViewPager2 pour afficher les fragments
+    private ViewPager2 viewPager2;
+
+    // Adaptateur pour les fragments
+    private RegisterFragmentStateAdapter pagerAdapter;
+
+    // Délai initial en millisecondes avant de changer de page
+    private long delayMs = 7500;
+
+    // Intervalle de temps en millisecondes entre les changements de page
+    private static final long PERIOD_MS = 5000;
+
+    // Timer pour gérer les changements automatiques de page
+    private Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
