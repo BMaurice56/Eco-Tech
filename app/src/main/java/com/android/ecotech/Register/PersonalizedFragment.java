@@ -1,4 +1,3 @@
-// Fragment personnalisé pour afficher un texte et d'autres éléments
 package com.android.ecotech.Register;
 
 import android.os.Bundle;
@@ -26,54 +25,41 @@ import java.util.List;
 
 public class PersonalizedFragment extends Fragment {
 
+    // Déclaration des éléments d'interface utilisateur
     private TextView textViewContent;
-
     private TextView textViewName;
-
     private Spinner spinnerContent;
-
     private EditText editTextMail;
-
     private EditText editTextComment;
-
     private Button buttonConfirmation;
-
     private LinearLayout checkboxContainer;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // Inflate la mise en page de ce fragment
+        // Inflate le layout pour ce fragment
         View view = inflater.inflate(R.layout.fragment_register, container, false);
 
-        // Récupère un TextView qui affiche les questions depuis le layout du fragment
+        // Initialisation des éléments d'interface utilisateur avec les vues du layout
         textViewContent = view.findViewById(R.id.textViewContent);
-        // Récupère le TextView qui affiche le nom écrit lors de l'inscription depuis le layout du fragment
         textViewName = view.findViewById(R.id.textViewName);
-        // Récupère le Spinner depuis le layout du fragment
         spinnerContent = view.findViewById(R.id.spinnerContent);
-        // Récupère l'EditText pour le mail depuis le layout du fragment
         editTextMail = view.findViewById(R.id.editTextMail);
-        // Récupère l'EditText pour le commentaire depuis le layout du fragment
         editTextComment = view.findViewById(R.id.editTextComment);
-        // Récupère le Button depuis le layout du fragment
         buttonConfirmation = view.findViewById(R.id.buttonConfirmation);
-        // Récupère le LinearLayout depuis le layout du fragment
         checkboxContainer = view.findViewById(R.id.checkboxContainer);
 
-
-        // Récupère le texte passé en argument
+        // Récupère le texte passé en argument et le définit dans textViewContent
         String text = getArguments().getString("text");
-
-        // Met à jour le texte du TextView avec le texte passé en argument
         textViewContent.setText(text);
 
-        // Récupère les informations données par l'utilisateur dans la classe IdentificationFragment
+        // Récupère les informations utilisateur depuis la classe UserInfo
         UserInfo userInfo = UserInfo.getInstance();
 
-        // Rend les éléments visibles ou invisibles en fonction de la valeur de l'indicateur
+        // Affiche ou masque les éléments en fonction de la valeur de "showElements" passée en argument
         switch (getArguments().getInt("showElements")) {
             case 1:
+                // Remplit le spinner avec les choix d'inscription
                 ArrayAdapter<CharSequence> adapterChoice = ArrayAdapter.createFromResource(
                         getContext(), R.array.spinner_choice_register, android.R.layout.simple_list_item_1);
                 adapterChoice.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -81,18 +67,22 @@ public class PersonalizedFragment extends Fragment {
                 spinnerContent.setVisibility(View.VISIBLE);
                 break;
             case 2:
+                // Affiche le nom d'utilisateur
                 textViewName.setText(userInfo.getUsername());
                 textViewName.setVisibility(View.VISIBLE);
                 break;
             case 3:
+                // Affiche le mot de passe
                 textViewName.setText(userInfo.getPassword());
                 textViewName.setVisibility(View.VISIBLE);
                 break;
             case 4:
+                // Affiche l'EditText pour le mail
                 editTextMail.setVisibility(View.VISIBLE);
                 userInfo.setMail(String.valueOf(editTextMail.getText()));
                 break;
             case 5:
+                // Remplit le spinner avec les types de sociétés
                 ArrayAdapter<CharSequence> adapterType = ArrayAdapter.createFromResource(
                         getContext(), R.array.spinner_type_of_company, android.R.layout.simple_list_item_1);
                 adapterType.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -100,6 +90,7 @@ public class PersonalizedFragment extends Fragment {
                 spinnerContent.setVisibility(View.VISIBLE);
                 break;
             case 6:
+                // Remplit le spinner avec les quantités
                 ArrayAdapter<CharSequence> adapterQuantite = ArrayAdapter.createFromResource(
                         getContext(), R.array.spinner_quantity, android.R.layout.simple_list_item_1);
                 adapterQuantite.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -107,6 +98,7 @@ public class PersonalizedFragment extends Fragment {
                 spinnerContent.setVisibility(View.VISIBLE);
                 break;
             case 7:
+                // Remplit le container avec les CheckBoxes pour les types d'appareils
                 String[] typesAppareils = getResources().getStringArray(R.array.checkbox_typeOfDevices);
                 checkboxContainer.removeAllViews();
                 for (String type : typesAppareils) {
@@ -117,6 +109,7 @@ public class PersonalizedFragment extends Fragment {
                 checkboxContainer.setVisibility(View.VISIBLE);
                 break;
             case 8:
+                // Remplit le spinner avec les options de fréquence de recyclage
                 ArrayAdapter<CharSequence> adapterFrequence = ArrayAdapter.createFromResource(
                         getContext(), R.array.spinner_frequency_recycling_options, android.R.layout.simple_list_item_1);
                 adapterFrequence.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -124,6 +117,7 @@ public class PersonalizedFragment extends Fragment {
                 spinnerContent.setVisibility(View.VISIBLE);
                 break;
             case 9:
+                // Remplit le spinner avec les options de collecte
                 ArrayAdapter<CharSequence> adapterCollecte = ArrayAdapter.createFromResource(
                         getContext(), R.array.spinner_collecting_options, android.R.layout.simple_list_item_1);
                 adapterCollecte.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -131,19 +125,20 @@ public class PersonalizedFragment extends Fragment {
                 spinnerContent.setVisibility(View.VISIBLE);
                 break;
             case 10:
+                // Affiche l'EditText pour les commentaires
                 editTextComment.setVisibility(View.VISIBLE);
                 break;
             default:
                 break;
         }
 
-        // Si le bouton est visible, déclencher le passage au fragment suivant
+        // Si l'élément à afficher n'est pas null, rend le bouton de confirmation visible
         if (getArguments().getInt("showElements") != 0) {
             buttonConfirmation.setVisibility(View.VISIBLE);
             buttonConfirmation.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    // Obtenez l'activité hôte pour accéder au ViewPager2 et passer au fragment suivant
+                    // Passe au fragment suivant en utilisant l'activité hôte
                     RegisterActivity activity = (RegisterActivity) getActivity();
                     if (activity != null) {
                         activity.moveToNextFragment();
@@ -152,6 +147,7 @@ public class PersonalizedFragment extends Fragment {
             });
         }
 
+        // Gestion spéciale pour les CheckBoxes (types d'appareils)
         if (getArguments().getInt("showElements") == 7) {
             buttonConfirmation.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -166,14 +162,15 @@ public class PersonalizedFragment extends Fragment {
                             }
                         }
                     }
-                    // Stock dans userInfo
+                    // Stocke les types d'appareils sélectionnés dans userInfo
                     userInfo.setDeviceTypes(selectedItems);
-                    // Affiche les valeurs sélectionnées
+                    // Affiche un toast avec les éléments sélectionnés
                     Toast.makeText(getContext(), "Items sélectionnés : " + selectedItems.toString(), Toast.LENGTH_SHORT).show();
                 }
             });
         }
 
+        // Assure que le bouton confirmation passe au fragment suivant
         buttonConfirmation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
