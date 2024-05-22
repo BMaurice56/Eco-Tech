@@ -8,11 +8,13 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
     private final FragmentFactory fragmentFactory;
 
+    // Constructeur prenant en argument l'activité de fragment et une instance de FragmentFactory
     public RegisterFragmentStateAdapter(@NonNull FragmentActivity fragmentActivity, FragmentFactory fragmentFactory) {
         super(fragmentActivity);
         this.fragmentFactory = fragmentFactory;
     }
 
+    // Crée et retourne le fragment correspondant à la position donnée
     @NonNull
     @Override
     public Fragment createFragment(int position) {
@@ -20,7 +22,7 @@ public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
             case 0:
                 return fragmentFactory.createFragment("Bienvenue !", 0);
             case 1:
-                return fragmentFactory.createFragment("Afin de mieux vous aidez, nous aimerions vous poser quelques questions", 0);
+                return fragmentFactory.createFragment("Afin de mieux vous aider, nous aimerions vous poser quelques questions", 0);
             case 2:
                 return fragmentFactory.createFragment("Vous pourrez modifier vos réponses à la fin du QCM ;)", 0);
             case 3:
@@ -51,9 +53,9 @@ public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
         }
     }
 
+    // Retourne le nombre total de fragments à afficher
     @Override
     public int getItemCount() {
-        // Retourne le nombre total de fragments à afficher
         return 14;
     }
 }
