@@ -1,7 +1,6 @@
 // Fragment personnalisé pour afficher un texte et d'autres éléments
 package com.android.ecotech.Register;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
