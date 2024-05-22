@@ -18,11 +18,15 @@ import com.android.ecotech.FrontDesk.ShopFragment;
 
 public class MainActivity extends AppCompatActivity {
     private FrameLayout frameLayout;
+
     private LinearLayout linearLayout;
 
     private ImageButton buttonHome;
+
     private ImageButton buttonShopping;
+
     private ImageButton buttonLoginRegister;
+
     private ImageButton buttonParameter;
 
     @Override

@@ -130,6 +130,7 @@ public class PersonalizedFragment extends Fragment {
                 adapterCollecte.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerContent.setAdapter(adapterCollecte);
                 spinnerContent.setVisibility(View.VISIBLE);
+                break;
             case 10:
                 editTextComment.setVisibility(View.VISIBLE);
                 break;
@@ -167,7 +168,7 @@ public class PersonalizedFragment extends Fragment {
                         }
                     }
                     // Stock dans userInfo
-                    userInfo.setSelectedItems(selectedItems);
+                    userInfo.setDeviceTypes(selectedItems);
                     // Affiche les valeurs sélectionnées
                     Toast.makeText(getContext(), "Items sélectionnés : " + selectedItems.toString(), Toast.LENGTH_SHORT).show();
                 }
