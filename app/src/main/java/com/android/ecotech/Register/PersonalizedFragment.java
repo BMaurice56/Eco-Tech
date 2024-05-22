@@ -123,6 +123,7 @@ public class PersonalizedFragment extends Fragment {
                 adapterFrequence.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerContent.setAdapter(adapterFrequence);
                 spinnerContent.setVisibility(View.VISIBLE);
+                break;
             case 9:
                 ArrayAdapter<CharSequence> adapterCollecte = ArrayAdapter.createFromResource(
                         getContext(), R.array.spinner_collecting_options, android.R.layout.simple_list_item_1);

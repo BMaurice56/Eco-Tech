@@ -44,7 +44,7 @@ public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
             case 12:
                 return fragmentFactory.createFragment("Avez-vous des besoins ou des commentaires particuliers concernant le recyclage de vos appareils ?", 10);
             case 13:
-                return fragmentFactory.createFragment("Nous vous remercions pour vos réponses", 0);
+                return new ThankYouFragment();
             default:
                 // Gestion de cas invalide, retourne un fragment vide
                 return new Fragment();

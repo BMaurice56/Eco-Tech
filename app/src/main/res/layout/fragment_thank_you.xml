@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register.ThankYouFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/thankYouMessage"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Nous vous remercions pour vos réponses :)"
+
+            android:textSize="20sp"
+
+            android:layout_marginStart="10dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/buttonReturnToMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonReturnToMain"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Retour à l'accueil"
+            android:backgroundTint="@color/green"
+
+            android:layout_marginBottom="200dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
