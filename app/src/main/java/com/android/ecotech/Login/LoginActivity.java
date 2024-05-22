@@ -1,4 +1,4 @@
-package com.android.ecotech;
+package com.android.ecotech.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.ecotech.MainActivity;
+import com.android.ecotech.R;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
