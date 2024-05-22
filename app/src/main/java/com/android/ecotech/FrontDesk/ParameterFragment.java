@@ -42,15 +42,12 @@ public class ParameterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_parameter, container, false);
 
-
         Spinner spinner = view.findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter =
                 ArrayAdapter.createFromResource(requireContext(), R.array.languages, android.R.layout.simple_list_item_1);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
-
 
         TextView textViewPol_Of_Conf = view.findViewById(R.id.textViewPol_Of_Conf);
         TextView textViewParamData = view.findViewById(R.id.textViewParamData);
@@ -72,9 +69,6 @@ public class ParameterFragment extends Fragment {
         textViewFAQ.setOnClickListener(clickListener);
         textViewGeneral_Conditions.setOnClickListener(clickListener);
         textViewLegalNotice.setOnClickListener(clickListener);
-
-
-
         return view;
     }
 }

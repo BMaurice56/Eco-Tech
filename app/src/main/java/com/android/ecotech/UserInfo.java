@@ -17,13 +17,16 @@ public class UserInfo {
     private String additionalComments;
 
     private UserInfo() {
+        // Initialisation de la liste des types d'appareils
         deviceTypes = new ArrayList<>();
     }
 
     public static synchronized UserInfo getInstance() {
+        // Création de l'instance si elle n'existe pas déjà
         if (instance == null) {
             instance = new UserInfo();
         }
+        //Retourne l'instance unique
         return instance;
     }
 
@@ -109,13 +112,16 @@ public class UserInfo {
         this.additionalComments = additionalComments;
     }
 
-    // Methods to add and remove device types
+    // Méthodes pour ajouter et supprimer des types d'appareils
+
+
+    // Ajoute un type d'appareil à la liste s'il n'y est pas déjà
     public void addDeviceType(String deviceType) {
         if (!this.deviceTypes.contains(deviceType)) {
             this.deviceTypes.add(deviceType);
         }
     }
-
+    // Supprime un type d'appareil de la liste
     public void removeDeviceType(String deviceType) {
         this.deviceTypes.remove(deviceType);
     }
