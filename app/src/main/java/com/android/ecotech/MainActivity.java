@@ -16,37 +16,43 @@ import com.android.ecotech.FrontDesk.IdentificationFragment;
 import com.android.ecotech.FrontDesk.ParameterFragment;
 import com.android.ecotech.FrontDesk.ShopFragment;
 
+// Déclaration de la classe MainActivity qui étend AppCompatActivity
 public class MainActivity extends AppCompatActivity {
-    private FrameLayout frameLayout;
+    private FrameLayout frameLayout; // Zone de conteneur pour afficher les fragments
 
-    private LinearLayout linearLayout;
+    private LinearLayout linearLayout; // Layout contenant les boutons de navigation
 
-    private ImageButton buttonHome;
+    private ImageButton buttonHome; // Bouton pour afficher l'écran d'accueil
 
-    private ImageButton buttonShopping;
+    private ImageButton buttonShopping; // Bouton pour afficher l'écran de shopping
 
-    private ImageButton buttonLoginRegister;
+    private ImageButton buttonLoginRegister; // Bouton pour afficher l'écran de connexion/inscription
 
-    private ImageButton buttonParameter;
+    private ImageButton buttonParameter; // Bouton pour afficher l'écran des paramètres
 
+    // Méthode appelée lors de la création de l'activité
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); // Définit le layout de l'activité
 
+        // Initialisation des éléments graphiques à partir des ressources XML
         frameLayout = (FrameLayout) findViewById(R.id.frameLayout);
         linearLayout = (LinearLayout) findViewById(R.id.layoutFooter);
-
         buttonHome = findViewById(R.id.buttonHome);
         buttonShopping = findViewById(R.id.buttonShopping);
         buttonLoginRegister = findViewById(R.id.buttonLoginRegister);
         buttonParameter = findViewById(R.id.buttonParameter);
 
+        // Remplace le contenu initial du FrameLayout par le fragment d'accueil lors de la création de l'activité
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frameLayout, new HomeFragment())
                 .addToBackStack(null)
                 .commit();
 
+        // Définition des listeners pour les boutons de navigation
+
+        // Bouton d'accueil
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Bouton de shopping
         buttonShopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Bouton de connexion/inscription
         buttonLoginRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Bouton des paramètres
         buttonParameter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,10 +85,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Méthode pour remplacer le fragment actuel par un nouveau fragment
     private void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frameLayout, fragment);
-        fragmentTransaction.commit();
+        FragmentManager fragmentManager = getSupportFragmentManager(); // Récupère le gestionnaire de fragments
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction(); // Démarre une transaction de fragments
+        fragmentTransaction.replace(R.id.frameLayout, fragment); // Remplace le contenu du FrameLayout par le nouveau fragment
+        fragmentTransaction.commit(); // Valide la transaction
     }
 }
