@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/monPanier"
+    tools:context=".MyBasketFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+
+                    tools:ignore="MissingConstraints">
+
+                    <ImageButton
+                        android:id="@+id/buttonRollback"
+                        android:layout_width="40dp"
+
+                        android:layout_height="40dp"
+                        android:background="#40FFFFFF"
+                        app:srcCompat="?attr/homeAsUpIndicator"
+
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/textTitle"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+
+                        android:text="Mon Panier"
+                        android:textAlignment="center"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintStart_toEndOf="@id/buttonRollback"
+                        tools:ignore="MissingConstraints" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/grey_background">
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/white_background2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imagePcPortable"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/view3"
+                        app:layout_constraintEnd_toEndOf="@+id/view3"
+                        app:layout_constraintStart_toStartOf="@+id/view3"
+                        app:layout_constraintTop_toTopOf="@+id/view3"
+                        app:srcCompat="@drawable/image_shop_ordinateur_portable_png" />
+
+                    <TextView
+                        android:id="@+id/textTitlePcPortable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Lenovo thinkpad L390 "
+
+                        style="@style/textStyleBold"
+                        app:layout_constraintStart_toEndOf="@+id/view3"
+                        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+                    <TextView
+                        android:id="@+id/textPrix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="500 €"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/view3"
+                        app:layout_constraintStart_toStartOf="@+id/textTitlePcPortable" />
+
+                    <TextView
+                        android:id="@+id/textTotalPcPortable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="500 €"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textTitlePcPortable" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <TextView
+                            android:id="@+id/textAdd"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/white_background3"
+                            android:gravity="center"
+                            android:text="+"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textQuantite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/textAdd"
+                            app:layout_constraintEnd_toEndOf="@+id/textAdd"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/textAdd" />
+
+                        <TextView
+                            android:id="@+id/textMin"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/white_background3"
+                            android:gravity="center"
+                            android:text="-"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/textQuantite"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textRecap"
+                        style="@style/textStyleBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Récapitulatif de la facture" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/grey_background"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/textTotal"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textFraisLivraison"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Frais de livraison"
+                        app:layout_constraintStart_toStartOf="@+id/textTotal"
+                        app:layout_constraintTop_toBottomOf="@+id/textTotal" />
+
+                    <TextView
+                        android:id="@+id/textTotalTaxe"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Total Taxe"
+                        app:layout_constraintStart_toStartOf="@+id/textFraisLivraison"
+                        app:layout_constraintTop_toBottomOf="@+id/textFraisLivraison" />
+
+                    <TextView
+                        android:id="@+id/textSommeTotal"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="490 €"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textTotal" />
+
+                    <TextView
+                        android:id="@+id/textSommeFrais"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="5 €"
+                        app:layout_constraintEnd_toEndOf="@id/textSommeTotal"
+                        app:layout_constraintTop_toBottomOf="@+id/textSommeTotal" />
+
+                    <TextView
+                        android:id="@+id/textSommeTaxe"
+                        style="@style/textStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="10 €"
+                        app:layout_constraintEnd_toEndOf="@id/textSommeFrais"
+                        app:layout_constraintTop_toBottomOf="@+id/textSommeFrais" />
+
+                    <View
+                        android:id="@+id/viewBarre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_margin="8dp"
+                        android:background="@color/grey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textTotalTaxe" />
+
+                    <TextView
+                        android:id="@+id/textTotalGeneral"
+                        style="@style/textStyleBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Total"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/viewBarre"
+                        app:layout_constraintTop_toBottomOf="@+id/viewBarre" />
+
+                    <TextView
+                        android:id="@+id/textSommeTotalGenerale"
+                        style="@style/textStyleBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="505 €"
+                        app:layout_constraintBottom_toBottomOf="@+id/textTotalGeneral"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textTotalGeneral" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textInformation"
+                    style="@style/textStyleBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Information" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/grey_background"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/textAdresseLivraison"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Votre adresse de livraison"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imagePointerMap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/textAdresseLivraison"
+                        app:layout_constraintTop_toBottomOf="@+id/textAdresseLivraison"
+                        app:srcCompat="@drawable/location" />
+
+                    <TextView
+                        android:id="@+id/textAdresse"
+                        style="@style/textStyleBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="None Adresse"
+                        app:layout_constraintBottom_toBottomOf="@+id/imagePointerMap"
+                        app:layout_constraintStart_toEndOf="@+id/imagePointerMap"
+                        app:layout_constraintTop_toTopOf="@+id/imagePointerMap" />
+
+                    <View
+                        android:id="@+id/viewBarre2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/grey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textAdresse" />
+
+                    <ImageView
+                        android:id="@+id/imageFleche"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textAdresse"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textAdresseLivraison"
+                        app:srcCompat="@drawable/head_arrow" />
+
+                    <TextView
+                        android:id="@+id/textTypePaiement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Méthode de paiement"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewBarre2" />
+
+                    <ImageView
+                        android:id="@+id/imageCarteCredit"
+                        android:layout_width="27dp"
+                        android:layout_height="22dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/textTypePaiement"
+                        app:layout_constraintTop_toBottomOf="@+id/textTypePaiement"
+                        app:srcCompat="@drawable/credit_card" />
+
+                    <TextView
+                        android:id="@+id/textCarteCredit"
+                        style="@style/textStyleBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Carte de crédit"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageCarteCredit"
+                        app:layout_constraintStart_toEndOf="@+id/imageCarteCredit"
+                        app:layout_constraintTop_toTopOf="@+id/imageCarteCredit" />
+
+                    <ImageView
+                        android:id="@+id/imageFleche2"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textCarteCredit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textTypePaiement"
+                        app:srcCompat="@drawable/head_arrow" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/buttonPayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/button_background"
+                        android:text="Payer"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
