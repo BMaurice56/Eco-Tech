@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.android.ecotech.HomeFragment"
+        android:name="com.android.ecotech.FrontDesk.HomeFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_home">
 
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.android.ecotech.ShopFragment"
+        android:name="com.android.ecotech.FrontDesk.ShopFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_shop">
 

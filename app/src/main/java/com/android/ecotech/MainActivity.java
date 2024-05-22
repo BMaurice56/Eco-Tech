@@ -11,6 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.android.ecotech.FrontDesk.HomeFragment;
+import com.android.ecotech.FrontDesk.IdentificationFragment;
+import com.android.ecotech.FrontDesk.ParameterFragment;
+import com.android.ecotech.FrontDesk.ShopFragment;
+
 public class MainActivity extends AppCompatActivity {
     private FrameLayout frameLayout;
     private LinearLayout linearLayout;

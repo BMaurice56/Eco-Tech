@@ -1,4 +1,4 @@
-package com.android.ecotech;
+package com.android.ecotech.FrontDesk;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
+
+import com.android.ecotech.R;
 import com.google.android.material.snackbar.Snackbar;
 
 public class ParameterFragment extends Fragment {
