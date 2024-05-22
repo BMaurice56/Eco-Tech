@@ -32,6 +32,18 @@ public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
             case 6:
                 return fragmentFactory.createFragment("Entrez votre mail :", 4);
             case 7:
+                return fragmentFactory.createFragment("Quelle est la nature de votre entreprise ?", 5);
+            case 8:
+                return fragmentFactory.createFragment("Combien d'appareils électroniques souhaitez-vous recycler ?", 6);
+            case 9:
+                return fragmentFactory.createFragment("Quels types d'appareils électroniques avez-vous besoin de recycler ?", 7);
+            case 10:
+                return fragmentFactory.createFragment("À quelle fréquence prévoyez-vous de recycler vos appareils électroniques ?", 8);
+            case 11:
+                return fragmentFactory.createFragment("Avez-vous besoin d'un service de collecte pour vos appareils ?", 9);
+            case 12:
+                return fragmentFactory.createFragment("Avez-vous des besoins ou des commentaires particuliers concernant le recyclage de vos appareils ?", 10);
+            case 13:
                 return fragmentFactory.createFragment("Nous vous remercions pour vos réponses", 0);
             default:
                 // Gestion de cas invalide, retourne un fragment vide
@@ -42,6 +54,6 @@ public class RegisterFragmentStateAdapter extends FragmentStateAdapter {
     @Override
     public int getItemCount() {
         // Retourne le nombre total de fragments à afficher
-        return 8;
+        return 14;
     }
 }

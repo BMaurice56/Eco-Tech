@@ -24,11 +24,45 @@
     <string name="environment">Nos engagements</string>
     <string name="companyAndUs">Votre entreprise et nous</string>
 
-    <string-array name="choiceRegister">
+    <string-array name="spinner_choice_register">
         <item>Un particulier</item>
         <item>Une entreprise</item>
     </string-array>
 
+    <string-array name="spinner_type_of_company">
+        <item>Commerce</item>
+        <item>Industrie</item>
+        <item>Services</item>
+        <item>Autre</item>
+    </string-array>
+
+    <string-array name="spinner_quantity">
+        <item>1-10</item>
+        <item>11-25</item>
+        <item>26-50</item>
+        <item>50+</item>
+    </string-array>
+
+    <string-array name="spinner_frequency_recycling_options">
+        <item>Chaque semaine</item>
+        <item>Chaque mois</item>
+        <item>Chaque trimestre</item>
+        <item>Chaque année</item>
+        <item>Autre</item>
+    </string-array>
+
+    <string-array name="spinner_collecting_options">
+        <item>Oui</item>
+        <item>Non</item>
+    </string-array>
+
+    <string-array name="checkbox_typeOfDevices">
+        <item>Ordinateurs</item>
+        <item>Imprimantes</item>
+        <item>Téléphones</item>
+        <item>Écrans</item>
+        <item>Autre</item>
+    </string-array>
 
     <string-array name="languages">
         <item>Français</item>

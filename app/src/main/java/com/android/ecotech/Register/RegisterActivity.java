@@ -15,7 +15,7 @@ import java.util.TimerTask;
 public class RegisterActivity extends AppCompatActivity {
     private ViewPager2 viewPager2;
     private RegisterFragmentStateAdapter pagerAdapter;
-    private static final long DELAY_MS = 5000;
+    private long delayMs = 7500;
     private static final long PERIOD_MS = 5000;
     private Timer timer;
 
@@ -30,14 +30,24 @@ public class RegisterActivity extends AppCompatActivity {
         pagerAdapter = new RegisterFragmentStateAdapter(this, fragmentFactory);
         viewPager2.setAdapter(pagerAdapter);
 
-        // Initialisation du Timer
+        // Démarrage initial du Timer
+        startAutoPageChange(delayMs);
+    }
+
+
+    /*
+        Démarre un nouveau 'Timer' avec le délai spécifié.
+        Appelle 'stopAutoPageChange()' pour s'assurer qu'aucun autre 'Timer' n'est en cours d'exécution avant de démarrer un nouveau.
+     */
+    public void startAutoPageChange(long delayMs) {
+        stopAutoPageChange();
         timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 autoPageChange();
             }
-        }, DELAY_MS, PERIOD_MS);
+        }, delayMs, PERIOD_MS);
     }
 
     private void autoPageChange() {
@@ -55,16 +65,26 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    /*
+        Arrête le 'Timer' actuel.
+     */
     public void stopAutoPageChange() {
         if (timer != null) {
             timer.cancel();
+            timer = null;
         }
     }
 
+    /*
+        Déplace le 'ViewPager2' vers le fragment suivant.
+        Augmente le délai et redémarre le 'Timer' avec le nouveau délai.
+     */
     public void moveToNextFragment() {
         int currentItem = viewPager2.getCurrentItem();
         if (currentItem < pagerAdapter.getItemCount() - 1) {
             viewPager2.setCurrentItem(currentItem + 1);
+            delayMs += 7500;
+            startAutoPageChange(delayMs);
         }
     }
 }
